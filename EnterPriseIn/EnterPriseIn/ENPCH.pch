@@ -1,0 +1,41 @@
+//
+//  ENPCH.pch
+//  EnterPriseIn
+//
+//  Created by 陶顺顺 on 2018/6/9.
+//  Copyright © 2018年 com.shun. All rights reserved.
+//
+
+#ifndef ENPCH_pch
+#define ENPCH_pch
+
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "ENHeader.h"
+
+#define ENVIRONMENT_HOME        0 //0 测试 1 正式
+
+#define kBasePort  @"https://api.berui.com/"
+
+#else
+
+#define kBasePort @"https://api.berui.com/"
+
+#endif
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+//系统判断
+#define IOS_VERSION      ([[[UIDevice currentDevice] systemVersion] floatValue])
+
+// app版本
+#define  APP_VERSION   [infoDictionary objectForKey:@"CFBundleShortVersionString"]
+
+#define NSLog(fmt, ...) NSLog((@"%s [line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+
+
+#endif /* ENPCH_pch */
