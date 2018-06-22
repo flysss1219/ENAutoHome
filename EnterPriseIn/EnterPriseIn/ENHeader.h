@@ -13,6 +13,9 @@
 
 #define KDeviceHeight  [UIScreen mainScreen].bounds.size.height
 
+#define kTabBarHeight  49
+#define kNavigationBarHeight  64
+
 #define ScreenSize [UIScreen mainScreen].bounds.size
 
 //主色调

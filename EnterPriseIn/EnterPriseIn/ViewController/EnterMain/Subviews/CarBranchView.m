@@ -38,25 +38,26 @@ const CGFloat kBranchGap = 15.0f;
 
 - (CGFloat)setCarBranchForData:(NSArray*)data andBranchTitle:(NSString*)title andInitTag:(NSInteger)tag{
     
-    // x = 15 y = 40
     self.titleLabel.text = title;
     CGFloat iconWidth = (_kBranchWidth - kBranchGap*4)/3;
-    _kBranchHeight = iconWidth+20;
+    _kBranchHeight = iconWidth+30.0f;
+    CGFloat y = 40.0f;
     for (int i = 0; i<data.count ; i++ ) {
-        BranchIcon *icon = [[BranchIcon alloc]initWithFrame:CGRectMake(0, 0, iconWidth, _kBranchHeight) andImage:[UIImage imageNamed:@""] andTitle:data[i]];
+        BranchIcon *icon = [[BranchIcon alloc]initWithFrame:CGRectMake(0, 0, iconWidth, _kBranchHeight) andImage:nil andTitle:data[i]];
         icon.delegate = self;
         icon.tag = tag+i;
         [self addSubview:icon];
         
         int row = i/3;
         int cloum = i%3;
-        icon.frame = CGRectMake(kBranchGap+(iconWidth+kBranchGap)*row,40+cloum*(_kBranchHeight+kBranchGap),iconWidth,_kBranchHeight);
+        icon.frame = CGRectMake(kBranchGap+(iconWidth+kBranchGap)*cloum,y+row*(_kBranchHeight),iconWidth,_kBranchHeight);
     }
     
-//    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 20.f+ _kBranchHeight*(data.count+2)/3-0.5, _kBranchWidth, 0.5)];
+//    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, y+ _kBranchHeight*((data.count+2)/3)-0.5, _kBranchWidth, 0.5)];
 //    line.backgroundColor = [UIColor colorWithHex:0xe5e5e5];
 //    [self addSubview:line];
-    return 20.f+ _kBranchHeight*(data.count+2)/3;
+    
+    return y+_kBranchHeight*((data.count+2)/3);
 }
 
 #pragma mark -BranchIconSelectDelegate

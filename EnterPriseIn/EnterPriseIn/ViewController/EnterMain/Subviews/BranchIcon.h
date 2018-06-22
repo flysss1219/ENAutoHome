@@ -20,7 +20,7 @@
 
 @property (nonatomic, weak) id<BranchIconSelectDelegate> delegate;
 
-- (instancetype)initWithFrame:(CGRect)frame andImage:(UIImage*)image andTitle:(NSString*)title;
+- (instancetype)initWithFrame:(CGRect)frame andImage:(NSString*)imageUrl andTitle:(NSString*)title;
 
 
 @end

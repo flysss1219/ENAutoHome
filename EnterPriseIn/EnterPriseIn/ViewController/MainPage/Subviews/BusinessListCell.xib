@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="BusinessListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="广告位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ga-LJ-f4G">
+                        <rect key="frame" x="115" y="15" width="43" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="嘎嘎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz3-sP-lSI">
+                        <rect key="frame" x="115" y="42" width="27" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zxpic" translatesAutoresizingMaskIntoConstraints="NO" id="4Xs-rT-n7c">
+                        <rect key="frame" x="15" y="15" width="90" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="4fk-OX-6HJ"/>
+                            <constraint firstAttribute="height" constant="70" id="Zan-RM-r9s"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vip" translatesAutoresizingMaskIntoConstraints="NO" id="6er-5m-rkG">
+                        <rect key="frame" x="168" y="17" width="12" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="Om7-Ri-sFr"/>
+                            <constraint firstAttribute="width" constant="12" id="m6o-gi-pSK"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwP-tW-vDr">
+                        <rect key="frame" x="15" y="99.5" width="305" height="0.5"/>
+                        <color key="backgroundColor" red="0.80392156859999997" green="0.80784313730000001" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="EQF-EV-LRy"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更更改为改为" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3e-E0-ykF">
+                        <rect key="frame" x="115" y="68" width="80" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HwP-tW-vDr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="2F5-aW-AUL"/>
+                    <constraint firstItem="9Ga-LJ-f4G" firstAttribute="leading" secondItem="4Xs-rT-n7c" secondAttribute="trailing" constant="10" id="2xr-VH-6RH"/>
+                    <constraint firstItem="G3e-E0-ykF" firstAttribute="leading" secondItem="4Xs-rT-n7c" secondAttribute="trailing" constant="10" id="Bz9-7r-bJ0"/>
+                    <constraint firstItem="6er-5m-rkG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="FdB-So-xiM"/>
+                    <constraint firstAttribute="trailing" secondItem="HwP-tW-vDr" secondAttribute="trailing" id="Lrm-UL-k6g"/>
+                    <constraint firstItem="9Ga-LJ-f4G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="T8M-Hj-oyU"/>
+                    <constraint firstItem="4Xs-rT-n7c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="XwU-yX-olu"/>
+                    <constraint firstItem="4Xs-rT-n7c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="aYA-zQ-WBL"/>
+                    <constraint firstItem="6er-5m-rkG" firstAttribute="leading" secondItem="9Ga-LJ-f4G" secondAttribute="trailing" constant="10" id="c2V-mX-If2"/>
+                    <constraint firstItem="HwP-tW-vDr" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" constant="0.5" id="drl-NA-nhc"/>
+                    <constraint firstItem="mz3-sP-lSI" firstAttribute="top" secondItem="9Ga-LJ-f4G" secondAttribute="bottom" constant="10" id="dvg-kD-pFC"/>
+                    <constraint firstItem="mz3-sP-lSI" firstAttribute="leading" secondItem="4Xs-rT-n7c" secondAttribute="trailing" constant="10" id="s20-W1-VJ5"/>
+                    <constraint firstItem="G3e-E0-ykF" firstAttribute="top" secondItem="mz3-sP-lSI" secondAttribute="bottom" constant="10" id="w6V-Es-CHw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="G3e-E0-ykF" id="EL4-Td-1rZ"/>
+                <outlet property="iconImageView" destination="4Xs-rT-n7c" id="L7S-ma-hie"/>
+                <outlet property="levelImageView" destination="6er-5m-rkG" id="RCC-UD-kIa"/>
+                <outlet property="tagLabel" destination="mz3-sP-lSI" id="Qr2-sj-Udp"/>
+                <outlet property="titleLabel" destination="9Ga-LJ-f4G" id="0If-1c-t26"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="vip" width="16" height="13"/>
+        <image name="zxpic" width="110" height="80"/>
+    </resources>
+</document>

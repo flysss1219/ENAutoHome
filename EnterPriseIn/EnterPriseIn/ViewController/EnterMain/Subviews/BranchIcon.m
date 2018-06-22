@@ -7,9 +7,7 @@
 //
 
 #import "BranchIcon.h"
-
-//#define BranchIconWidth  80
-//#define BranchIconHeight 100
+#import <UIImageView+WebCache.h>
 
 @interface BranchIcon()
 
@@ -26,7 +24,7 @@
     CGFloat _width;
     CGFloat _height;
 }
-- (instancetype)initWithFrame:(CGRect)frame andImage:(UIImage*)image andTitle:(NSString*)title{
+- (instancetype)initWithFrame:(CGRect)frame andImage:(NSString*)imageUrl andTitle:(NSString*)title{
     
     if (self = [super initWithFrame:frame]) {
         _width = frame.size.width;
@@ -34,8 +32,9 @@
         [self addSubview:self.iconImage];
         [self addSubview:self.iconLabel];
         [self addSubview:self.iconButton];
-//        self.iconImage.image = image;
+        
         self.iconLabel.text = title;
+        [self.iconImage sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"mrfl"]];
     }
     return self;
 }
@@ -50,14 +49,13 @@
 
 - (UILabel*)iconLabel{
     if (!_iconLabel) {
-        _iconLabel = [GlobalFactoryViews createLabelWithFrame:CGRectMake(0, _height-15, _width, 15) text:nil labelFont:[UIFont systemFontOfSize:12] textColor:ViceTitleColor textAligenment:1];
+        _iconLabel = [GlobalFactoryViews createLabelWithFrame:CGRectMake(0, _height-25, _width, 15) text:nil labelFont:[UIFont systemFontOfSize:12] textColor:ViceTitleColor textAligenment:1];
     }
     return _iconLabel;
 }
 - (UIImageView*)iconImage{
     if (!_iconImage) {
         _iconImage = [GlobalFactoryViews createImageViewWithFrame:CGRectMake(0, 0, _width, _width)];
-        _iconImage.image = [UIImage imageNamed:@"mrfl"];
         _iconImage.layer.cornerRadius = 2.0f;
         _iconImage.layer.masksToBounds = YES;
     }

@@ -168,6 +168,14 @@
 		6A1F25E220DBAAA700163C99 /* YYTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F258F20DBAAA700163C99 /* YYTransaction.m */; };
 		6A1F25E320DBAAA700163C99 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F259120DBAAA700163C99 /* YYWeakProxy.m */; };
 		6A1F25E620DBB12600163C99 /* BranchScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F25E520DBB12600163C99 /* BranchScrollView.m */; };
+		6A4C127620DCAB420032E079 /* BusinessTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C127520DCAB420032E079 /* BusinessTableView.m */; };
+		6A4C127A20DCAB5F0032E079 /* BusinessListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C127820DCAB5F0032E079 /* BusinessListCell.m */; };
+		6A4C127B20DCAB5F0032E079 /* BusinessListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A4C127920DCAB5F0032E079 /* BusinessListCell.xib */; };
+		6A4C127E20DCD1510032E079 /* MainBranchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C127D20DCD1510032E079 /* MainBranchView.m */; };
+		6A4C128120DD02860032E079 /* ENNewsBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C128020DD02860032E079 /* ENNewsBaseTableView.m */; };
+		6A4C128520DD02CB0032E079 /* NewsSmallImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C128320DD02CB0032E079 /* NewsSmallImageCell.m */; };
+		6A4C128620DD02CB0032E079 /* NewsSmallImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A4C128420DD02CB0032E079 /* NewsSmallImageCell.xib */; };
+		6A4C128920DD02FC0032E079 /* NewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C128820DD02FC0032E079 /* NewsItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -515,6 +523,20 @@
 		6A1F259220DBAAA700163C99 /* YYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKit.h; sourceTree = "<group>"; };
 		6A1F25E420DBB12600163C99 /* BranchScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BranchScrollView.h; sourceTree = "<group>"; };
 		6A1F25E520DBB12600163C99 /* BranchScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BranchScrollView.m; sourceTree = "<group>"; };
+		6A4C127420DCAB420032E079 /* BusinessTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessTableView.h; sourceTree = "<group>"; };
+		6A4C127520DCAB420032E079 /* BusinessTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessTableView.m; sourceTree = "<group>"; };
+		6A4C127720DCAB5F0032E079 /* BusinessListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessListCell.h; sourceTree = "<group>"; };
+		6A4C127820DCAB5F0032E079 /* BusinessListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessListCell.m; sourceTree = "<group>"; };
+		6A4C127920DCAB5F0032E079 /* BusinessListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessListCell.xib; sourceTree = "<group>"; };
+		6A4C127C20DCD1510032E079 /* MainBranchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBranchView.h; sourceTree = "<group>"; };
+		6A4C127D20DCD1510032E079 /* MainBranchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBranchView.m; sourceTree = "<group>"; };
+		6A4C127F20DD02860032E079 /* ENNewsBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENNewsBaseTableView.h; sourceTree = "<group>"; };
+		6A4C128020DD02860032E079 /* ENNewsBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENNewsBaseTableView.m; sourceTree = "<group>"; };
+		6A4C128220DD02CB0032E079 /* NewsSmallImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsSmallImageCell.h; sourceTree = "<group>"; };
+		6A4C128320DD02CB0032E079 /* NewsSmallImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsSmallImageCell.m; sourceTree = "<group>"; };
+		6A4C128420DD02CB0032E079 /* NewsSmallImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsSmallImageCell.xib; sourceTree = "<group>"; };
+		6A4C128720DD02FC0032E079 /* NewsItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsItem.h; sourceTree = "<group>"; };
+		6A4C128820DD02FC0032E079 /* NewsItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsItem.m; sourceTree = "<group>"; };
 		96C58E9984ADA834F26F820A /* Pods-EnterPriseIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnterPriseIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnterPriseIn/Pods-EnterPriseIn.debug.xcconfig"; sourceTree = "<group>"; };
 		D68F2E7F82A2711CCA44AB25 /* libPods-EnterPriseIn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EnterPriseIn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -739,13 +761,13 @@
 		18EE212420CB7E690030FD98 /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				18EE212520CB7E690030FD98 /* UIView+SDExtension.h */,
-				18EE212620CB7E690030FD98 /* SDCycleScrollView.h */,
-				18EE212720CB7E690030FD98 /* SDCollectionViewCell.h */,
-				18EE212820CB7E690030FD98 /* SDCycleScrollView.m */,
-				18EE212920CB7E690030FD98 /* UIView+SDExtension.m */,
-				18EE212A20CB7E690030FD98 /* SDCollectionViewCell.m */,
 				18EE212B20CB7E690030FD98 /* PageControl */,
+				18EE212720CB7E690030FD98 /* SDCollectionViewCell.h */,
+				18EE212A20CB7E690030FD98 /* SDCollectionViewCell.m */,
+				18EE212620CB7E690030FD98 /* SDCycleScrollView.h */,
+				18EE212820CB7E690030FD98 /* SDCycleScrollView.m */,
+				18EE212520CB7E690030FD98 /* UIView+SDExtension.h */,
+				18EE212920CB7E690030FD98 /* UIView+SDExtension.m */,
 			);
 			path = SDCycleScrollView;
 			sourceTree = "<group>";
@@ -754,13 +776,13 @@
 			isa = PBXGroup;
 			children = (
 				18EE212C20CB7E690030FD98 /* TAAbstractDotView.h */,
-				18EE212D20CB7E690030FD98 /* TADotView.m */,
-				18EE212E20CB7E690030FD98 /* TAPageControl.m */,
-				18EE212F20CB7E690030FD98 /* TAAnimatedDotView.m */,
 				18EE213020CB7E690030FD98 /* TAAbstractDotView.m */,
-				18EE213120CB7E690030FD98 /* TADotView.h */,
 				18EE213220CB7E690030FD98 /* TAAnimatedDotView.h */,
+				18EE212F20CB7E690030FD98 /* TAAnimatedDotView.m */,
+				18EE213120CB7E690030FD98 /* TADotView.h */,
+				18EE212D20CB7E690030FD98 /* TADotView.m */,
 				18EE213320CB7E690030FD98 /* TAPageControl.h */,
+				18EE212E20CB7E690030FD98 /* TAPageControl.m */,
 			);
 			path = PageControl;
 			sourceTree = "<group>";
@@ -919,6 +941,8 @@
 		6A1F24C120DB919900163C99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6A4C128720DD02FC0032E079 /* NewsItem.h */,
+				6A4C128820DD02FC0032E079 /* NewsItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -926,6 +950,11 @@
 		6A1F24C220DB919900163C99 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				6A4C127F20DD02860032E079 /* ENNewsBaseTableView.h */,
+				6A4C128020DD02860032E079 /* ENNewsBaseTableView.m */,
+				6A4C128220DD02CB0032E079 /* NewsSmallImageCell.h */,
+				6A4C128320DD02CB0032E079 /* NewsSmallImageCell.m */,
+				6A4C128420DD02CB0032E079 /* NewsSmallImageCell.xib */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -940,6 +969,13 @@
 		6A1F24C420DB91A000163C99 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				6A4C127C20DCD1510032E079 /* MainBranchView.h */,
+				6A4C127D20DCD1510032E079 /* MainBranchView.m */,
+				6A4C127420DCAB420032E079 /* BusinessTableView.h */,
+				6A4C127520DCAB420032E079 /* BusinessTableView.m */,
+				6A4C127720DCAB5F0032E079 /* BusinessListCell.h */,
+				6A4C127820DCAB5F0032E079 /* BusinessListCell.m */,
+				6A4C127920DCAB5F0032E079 /* BusinessListCell.xib */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -1391,6 +1427,8 @@
 				6A1F24D520DB992400163C99 /* Localizable.strings in Resources */,
 				18EE218920CB7E690030FD98 /* MBProgressHUD.bundle in Resources */,
 				6A1F24DB20DB996A00163C99 /* ENAppLanguage.strings in Resources */,
+				6A4C128620DD02CB0032E079 /* NewsSmallImageCell.xib in Resources */,
+				6A4C127B20DCAB5F0032E079 /* BusinessListCell.xib in Resources */,
 				18355F3920CB736700F5B22D /* Main.storyboard in Resources */,
 				18EE218220CB7E690030FD98 /* SVProgressHUD.bundle in Resources */,
 			);
@@ -1469,6 +1507,7 @@
 				18EE218D20CB7E690030FD98 /* TADotView.m in Sources */,
 				6A1F25B920DBAAA700163C99 /* UIImageView+YYWebImage.m in Sources */,
 				6A1F25D720DBAAA700163C99 /* YYTextView.m in Sources */,
+				6A4C128920DD02FC0032E079 /* NewsItem.m in Sources */,
 				6A1F259520DBAAA700163C99 /* NSData+YYAdd.m in Sources */,
 				18EE21BA20CB805D0030FD98 /* TTTabBarItem.m in Sources */,
 				6A1F259620DBAAA700163C99 /* NSDate+YYAdd.m in Sources */,
@@ -1479,6 +1518,7 @@
 				6A1F259E20DBAAA700163C99 /* NSString+YYAdd.m in Sources */,
 				6A1F25D020DBAAA700163C99 /* YYTextArchiver.m in Sources */,
 				6A1F259720DBAAA700163C99 /* NSDictionary+YYAdd.m in Sources */,
+				6A4C128520DD02CB0032E079 /* NewsSmallImageCell.m in Sources */,
 				18EE21A020CB7E690030FD98 /* NSString+DateFormatter.m in Sources */,
 				18EE218720CB7E690030FD98 /* MBProgressHUD.m in Sources */,
 				6A1F25DA20DBAAA700163C99 /* YYFileHash.m in Sources */,
@@ -1521,6 +1561,7 @@
 				6A1F25D520DBAAA700163C99 /* YYTextUtilities.m in Sources */,
 				18EE21B720CB7F380030FD98 /* ENBaseViewController.m in Sources */,
 				18EE217320CB7E690030FD98 /* UIViewController+RTRootNavigationController.m in Sources */,
+				6A4C127620DCAB420032E079 /* BusinessTableView.m in Sources */,
 				18EE219920CB7E690030FD98 /* UINavigationController+SafePushing.m in Sources */,
 				18EE217E20CB7E690030FD98 /* SVRadialGradientLayer.m in Sources */,
 				6A1F25B520DBAAA700163C99 /* _YYWebImageSetter.m in Sources */,
@@ -1536,6 +1577,7 @@
 				6A1F25AD20DBAAA700163C99 /* UIScrollView+YYAdd.m in Sources */,
 				6A1F25A420DBAAA700163C99 /* UIBarButtonItem+YYAdd.m in Sources */,
 				6A1F25CC20DBAAA700163C99 /* YYTextSelectionView.m in Sources */,
+				6A4C127A20DCAB5F0032E079 /* BusinessListCell.m in Sources */,
 				18EE219520CB7E690030FD98 /* UIColor+Hex.m in Sources */,
 				6A1F25C320DBAAA700163C99 /* YYClassInfo.m in Sources */,
 				6A1F24E120DBA8C600163C99 /* YYFPSLabel.m in Sources */,
@@ -1606,9 +1648,11 @@
 				18EE217F20CB7E690030FD98 /* SVProgressAnimatedView.m in Sources */,
 				6A1F25A720DBAAA700163C99 /* UIControl+YYAdd.m in Sources */,
 				6A1F25B220DBAAA700163C99 /* YYDiskCache.m in Sources */,
+				6A4C128120DD02860032E079 /* ENNewsBaseTableView.m in Sources */,
 				18EE218520CB7E690030FD98 /* KeychainItemWrapper.m in Sources */,
 				6A1F25C120DBAAA700163C99 /* YYWebImageOperation.m in Sources */,
 				6A1F25CE20DBAAA700163C99 /* NSParagraphStyle+YYText.m in Sources */,
+				6A4C127E20DCD1510032E079 /* MainBranchView.m in Sources */,
 				6A1F25AC20DBAAA700163C99 /* UIScreen+YYAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

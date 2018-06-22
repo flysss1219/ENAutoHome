@@ -25,7 +25,6 @@ const CGFloat btnHeight = 50.f;
 
 - (CGFloat)setBranchScrollViewForData:(NSArray*)data{
     
-    
     [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
        
         UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(0, btnHeight*idx, _kWidth, btnHeight)];
@@ -36,6 +35,7 @@ const CGFloat btnHeight = 50.f;
         [label addGestureRecognizer:tap];
         label.userInteractionEnabled = YES;
         label.backgroundColor = [UIColor colorWithHex:0xeef1f8];
+        label.tag = 1000+idx;
         [self addSubview:label];
         if (idx == 0) {
             label.backgroundColor = [UIColor whiteColor];
@@ -70,6 +70,25 @@ const CGFloat btnHeight = 50.f;
         }
     }
     
+    if (_branchDelegate && [_branchDelegate respondsToSelector:@selector(branchViewDidSelectInside:)]) {
+        [_branchDelegate branchViewDidSelectInside:label.tag-1000];
+    }
 }
+
+- (void)branchButtonDidSelect:(NSUInteger)index{
+    
+    UILabel *label = (UILabel*)[self viewWithTag:index+1000];
+    label.backgroundColor = [UIColor whiteColor];
+    label.textColor = ViceTitleColor;
+    
+    for (UILabel *obj in self.subviews) {
+        if (obj != label) {
+            obj.backgroundColor = [UIColor colorWithHex:0xeef1f8];
+            obj.textColor = SubTitleColor;
+        }
+    }
+}
+
+
 
 @end

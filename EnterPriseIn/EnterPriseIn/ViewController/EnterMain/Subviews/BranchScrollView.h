@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class BranchScrollView;
+@protocol BranchScrollViewDelegate<NSObject>
+@optional
+- (void)branchViewDidSelectInside:(NSInteger)index;
+@end
 @interface BranchScrollView : UIScrollView
 
+@property (nonatomic, weak) id<BranchScrollViewDelegate> branchDelegate;
+
 - (CGFloat)setBranchScrollViewForData:(NSArray*)data;
+
+
+- (void)branchButtonDidSelect:(NSUInteger)index;
+
 
 @end
