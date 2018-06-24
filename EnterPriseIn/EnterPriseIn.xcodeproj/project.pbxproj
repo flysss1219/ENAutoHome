@@ -18,6 +18,13 @@
 		18355F4120CB736700F5B22D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18355F4020CB736700F5B22D /* main.m */; };
 		18355F4B20CB736700F5B22D /* EnterPriseInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18355F4A20CB736700F5B22D /* EnterPriseInTests.m */; };
 		18355F5620CB736700F5B22D /* EnterPriseInUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18355F5520CB736700F5B22D /* EnterPriseInUITests.m */; };
+		18A77C5420DF5C07006D3254 /* ApplyEnterpriseEnterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A77C5220DF5C07006D3254 /* ApplyEnterpriseEnterView.xib */; };
+		18A77C5520DF5C07006D3254 /* ApplyEnterpriseEnterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A77C5320DF5C07006D3254 /* ApplyEnterpriseEnterView.m */; };
+		18A77C5920DF5C69006D3254 /* ENShareAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A77C5820DF5C69006D3254 /* ENShareAppView.m */; };
+		18A77C5E20DF63BE006D3254 /* PersonHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A77C5D20DF63BE006D3254 /* PersonHeadView.m */; };
+		18A77C6020DF63CF006D3254 /* PersonHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A77C5F20DF63CF006D3254 /* PersonHeadView.xib */; };
+		18A77C6320DF6B4A006D3254 /* UserAccountInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A77C6220DF6B4A006D3254 /* UserAccountInfoView.m */; };
+		18A77C6520DF6B51006D3254 /* UserAccountInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A77C6420DF6B51006D3254 /* UserAccountInfoView.xib */; };
 		18EE217320CB7E690030FD98 /* UIViewController+RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE20ED20CB7E690030FD98 /* UIViewController+RTRootNavigationController.m */; };
 		18EE217420CB7E690030FD98 /* RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE20F020CB7E690030FD98 /* RTRootNavigationController.m */; };
 		18EE217920CB7E690030FD98 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE20FD20CB7E690030FD98 /* Reachability.m */; };
@@ -215,6 +222,17 @@
 		18355F5120CB736700F5B22D /* EnterPriseInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnterPriseInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18355F5520CB736700F5B22D /* EnterPriseInUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterPriseInUITests.m; sourceTree = "<group>"; };
 		18355F5720CB736700F5B22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A77C5120DF5C07006D3254 /* ApplyEnterpriseEnterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyEnterpriseEnterView.h; sourceTree = "<group>"; };
+		18A77C5220DF5C07006D3254 /* ApplyEnterpriseEnterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyEnterpriseEnterView.xib; sourceTree = "<group>"; };
+		18A77C5320DF5C07006D3254 /* ApplyEnterpriseEnterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyEnterpriseEnterView.m; sourceTree = "<group>"; };
+		18A77C5720DF5C69006D3254 /* ENShareAppView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENShareAppView.h; sourceTree = "<group>"; };
+		18A77C5820DF5C69006D3254 /* ENShareAppView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENShareAppView.m; sourceTree = "<group>"; };
+		18A77C5C20DF63BE006D3254 /* PersonHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonHeadView.h; sourceTree = "<group>"; };
+		18A77C5D20DF63BE006D3254 /* PersonHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonHeadView.m; sourceTree = "<group>"; };
+		18A77C5F20DF63CF006D3254 /* PersonHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonHeadView.xib; sourceTree = "<group>"; };
+		18A77C6120DF6B4A006D3254 /* UserAccountInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAccountInfoView.h; sourceTree = "<group>"; };
+		18A77C6220DF6B4A006D3254 /* UserAccountInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserAccountInfoView.m; sourceTree = "<group>"; };
+		18A77C6420DF6B51006D3254 /* UserAccountInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAccountInfoView.xib; sourceTree = "<group>"; };
 		18EE20EA20CB7E690030FD98 /* HTTPRequest+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HTTPRequest+Private.h"; sourceTree = "<group>"; };
 		18EE20ED20CB7E690030FD98 /* UIViewController+RTRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RTRootNavigationController.m"; sourceTree = "<group>"; };
 		18EE20EE20CB7E690030FD98 /* RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRootNavigationController.h; sourceTree = "<group>"; };
@@ -644,6 +662,31 @@
 			path = EnterPriseInUITests;
 			sourceTree = "<group>";
 		};
+		18A77C5020DF5BEE006D3254 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				18A77C5120DF5C07006D3254 /* ApplyEnterpriseEnterView.h */,
+				18A77C5320DF5C07006D3254 /* ApplyEnterpriseEnterView.m */,
+				18A77C5220DF5C07006D3254 /* ApplyEnterpriseEnterView.xib */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		18A77C5620DF5C46006D3254 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				18A77C5720DF5C69006D3254 /* ENShareAppView.h */,
+				18A77C5820DF5C69006D3254 /* ENShareAppView.m */,
+				18A77C5C20DF63BE006D3254 /* PersonHeadView.h */,
+				18A77C5D20DF63BE006D3254 /* PersonHeadView.m */,
+				18A77C5F20DF63CF006D3254 /* PersonHeadView.xib */,
+				18A77C6120DF6B4A006D3254 /* UserAccountInfoView.h */,
+				18A77C6220DF6B4A006D3254 /* UserAccountInfoView.m */,
+				18A77C6420DF6B51006D3254 /* UserAccountInfoView.xib */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		18EE20E720CB7E690030FD98 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,8 +930,7 @@
 		18EE21BD20CB816F0030FD98 /* EnterPrise */ = {
 			isa = PBXGroup;
 			children = (
-				6A1F24C820DB91B000163C99 /* Model */,
-				6A1F24C720DB91B000163C99 /* Subviews */,
+				18A77C5020DF5BEE006D3254 /* Subviews */,
 				18EE21C420CB81ED0030FD98 /* ENEnterpriseViewController.h */,
 				18EE21C520CB81ED0030FD98 /* ENEnterpriseViewController.m */,
 			);
@@ -898,8 +940,7 @@
 		18EE21BE20CB816F0030FD98 /* Person */ = {
 			isa = PBXGroup;
 			children = (
-				6A1F24C620DB91A700163C99 /* Model */,
-				6A1F24C520DB91A700163C99 /* Subviews */,
+				18A77C5620DF5C46006D3254 /* Subviews */,
 				18EE21C720CB82000030FD98 /* ENPersonViewController.h */,
 				18EE21C820CB82000030FD98 /* ENPersonViewController.m */,
 			);
@@ -978,34 +1019,6 @@
 				6A4C127920DCAB5F0032E079 /* BusinessListCell.xib */,
 			);
 			path = Subviews;
-			sourceTree = "<group>";
-		};
-		6A1F24C520DB91A700163C99 /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
-		6A1F24C620DB91A700163C99 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6A1F24C720DB91B000163C99 /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
-		6A1F24C820DB91B000163C99 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		6A1F24C920DB91B900163C99 /* Subviews */ = {
@@ -1425,12 +1438,15 @@
 				18355F3B20CB736700F5B22D /* Assets.xcassets in Resources */,
 				181E977720DA9C140016C06E /* NetworkErrorView.xib in Resources */,
 				6A1F24D520DB992400163C99 /* Localizable.strings in Resources */,
+				18A77C5420DF5C07006D3254 /* ApplyEnterpriseEnterView.xib in Resources */,
 				18EE218920CB7E690030FD98 /* MBProgressHUD.bundle in Resources */,
 				6A1F24DB20DB996A00163C99 /* ENAppLanguage.strings in Resources */,
 				6A4C128620DD02CB0032E079 /* NewsSmallImageCell.xib in Resources */,
 				6A4C127B20DCAB5F0032E079 /* BusinessListCell.xib in Resources */,
 				18355F3920CB736700F5B22D /* Main.storyboard in Resources */,
+				18A77C6520DF6B51006D3254 /* UserAccountInfoView.xib in Resources */,
 				18EE218220CB7E690030FD98 /* SVProgressHUD.bundle in Resources */,
+				18A77C6020DF63CF006D3254 /* PersonHeadView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1543,6 +1559,7 @@
 				18EE219D20CB7E690030FD98 /* UIActionSheet+Blocks.m in Sources */,
 				181E977520DA9C140016C06E /* NetworkErrorView.m in Sources */,
 				6A1F259920DBAAA700163C99 /* NSNotificationCenter+YYAdd.m in Sources */,
+				18A77C5520DF5C07006D3254 /* ApplyEnterpriseEnterView.m in Sources */,
 				6A1F25DE20DBAAA700163C99 /* YYSentinel.m in Sources */,
 				6A1F25C620DBAAA700163C99 /* YYTextEffectWindow.m in Sources */,
 				18EE219620CB7E690030FD98 /* NSDictionary+Null.m in Sources */,
@@ -1592,9 +1609,11 @@
 				6A1F25A620DBAAA700163C99 /* UIColor+YYAdd.m in Sources */,
 				6A1F25C520DBAAA700163C99 /* YYTextDebugOption.m in Sources */,
 				6A1F25DF20DBAAA700163C99 /* YYThreadSafeArray.m in Sources */,
+				18A77C5920DF5C69006D3254 /* ENShareAppView.m in Sources */,
 				6A1F25D320DBAAA700163C99 /* YYTextRubyAnnotation.m in Sources */,
 				6A1F25E020DBAAA700163C99 /* YYThreadSafeDictionary.m in Sources */,
 				6A1F25D920DBAAA700163C99 /* YYDispatchQueuePool.m in Sources */,
+				18A77C6320DF6B4A006D3254 /* UserAccountInfoView.m in Sources */,
 				18EE218A20CB7E690030FD98 /* SDCycleScrollView.m in Sources */,
 				18EE217B20CB7E690030FD98 /* WKWebViewJavascriptBridge.m in Sources */,
 				6A1F24D020DB93EC00163C99 /* BranchIcon.m in Sources */,
@@ -1609,6 +1628,7 @@
 				6A1F25BA20DBAAA700163C99 /* YYAnimatedImageView.m in Sources */,
 				6A1F25CB20DBAAA700163C99 /* YYTextMagnifier.m in Sources */,
 				6A1F25E220DBAAA700163C99 /* YYTransaction.m in Sources */,
+				18A77C5E20DF63BE006D3254 /* PersonHeadView.m in Sources */,
 				18EE21B120CB7EFC0030FD98 /* ENTabBarController.m in Sources */,
 				18EE219020CB7E690030FD98 /* TAAbstractDotView.m in Sources */,
 				18EE219120CB7E690030FD98 /* NSData+NSDataAdditions.m in Sources */,

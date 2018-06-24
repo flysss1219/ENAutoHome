@@ -22,5 +22,6 @@
 
 - (instancetype)initWithFrame:(CGRect)frame andImage:(NSString*)imageUrl andTitle:(NSString*)title;
 
+- (instancetype)initWithFrame:(CGRect)frame andImageStr:(NSString*)image title:(NSString*)title;
 
 @end

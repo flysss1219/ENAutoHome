@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class NewsItem;
 
 @interface NewsSmallImageCell : UITableViewCell
+
+@property (nonatomic,copy) NSString *keyword;
+@property (nonatomic,weak) NewsItem *newsItem;
+
 
 @end

@@ -7,11 +7,13 @@
 //
 
 #import "ENNewsMainViewController.h"
-
-
+#import "ENNewsBaseTableView.h"
 
 
 @interface ENNewsMainViewController ()
+
+@property (nonatomic, strong) ENNewsBaseTableView *baseTableView;
+
 
 @end
 
@@ -20,7 +22,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"TabBarHomeNews", nil);
+    
+    [self.view addSubview:self.baseTableView];
+    
+    [self.baseTableView reloadTableVieWithDataSourceArray:@[@"1",@"2",@"3",@"4",@"5"] withKeyWord:nil];
 }
+
+
+- (ENNewsBaseTableView*)baseTableView{
+    if (!_baseTableView) {
+        _baseTableView = [[ENNewsBaseTableView alloc]initWithFrame:CGRectMake(0, 0, KDeviceWidth, KDeviceHeight-64-49) style:UITableViewStylePlain];
+    }
+    return _baseTableView;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

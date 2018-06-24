@@ -39,6 +39,23 @@
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame andImageStr:(NSString*)image title:(NSString*)title{
+    
+    if (self = [super initWithFrame:frame]) {
+        _width = frame.size.width;
+        _height = frame.size.height;
+        [self addSubview:self.iconImage];
+        [self addSubview:self.iconLabel];
+        [self addSubview:self.iconButton];
+        self.iconImage.frame = CGRectMake(_width/2-15,5, 30, 30);
+        self.iconLabel.text = title;
+        self.iconImage.image = [UIImage imageNamed:image];
+    
+    }
+    return self;
+    
+}
+
 - (void)iconDidSelect{
     if (_delegate && [_delegate respondsToSelector:@selector(branchIconDidSelect:)]) {
         [_delegate branchIconDidSelect:self.tag];

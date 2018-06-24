@@ -7,8 +7,13 @@
 //
 
 #import "ENEnterpriseViewController.h"
+#import "ApplyEnterpriseEnterView.h"
 
-@interface ENEnterpriseViewController ()
+@interface ENEnterpriseViewController ()<UIScrollViewDelegate>
+
+@property (nonatomic, strong) UIScrollView *mainScrollView;
+
+@property (nonatomic, strong) ApplyEnterpriseEnterView *applyView;
 
 @end
 
@@ -17,7 +22,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"TabBarHomeEnter", nil);
+    
+    [self readyView];
 }
+
+- (void)readyView{
+    
+    [self.view addSubview:self.mainScrollView];
+    self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth, KDeviceHeight-64);
+    [self.mainScrollView addSubview:self.applyView];
+    
+}
+
+- (UIScrollView *)mainScrollView {
+    if (!_mainScrollView) {
+        _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,0, KDeviceWidth, KDeviceHeight-49-64)];
+        _mainScrollView.showsVerticalScrollIndicator = NO;
+        _mainScrollView.showsHorizontalScrollIndicator = NO;
+        _mainScrollView.delegate = self;
+        _mainScrollView.backgroundColor = [UIColor whiteColor];
+        _mainScrollView.scrollEnabled = YES;
+    }
+    return _mainScrollView;
+}
+
+- (ApplyEnterpriseEnterView*)applyView{
+    if(!_applyView){
+        _applyView = [[[NSBundle mainBundle]loadNibNamed:@"ApplyEnterpriseEnterView" owner:self options:nil]lastObject];
+    }
+    return _applyView;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

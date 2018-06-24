@@ -24,6 +24,8 @@
 - (NSInteger)numberOfSectionsInNewsItemBaseTableView:(UITableView *)tableView;
 - (NSInteger)newsItemBaseTableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 - (NewsItem *)objectInIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)newsItemBaseTableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)newsItemBaseTableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
@@ -31,4 +33,8 @@
 @interface ENNewsBaseTableView : UITableView
 
 @property (nonatomic,weak) id<ENNewsBaseTableViewDelegate> newsItemBaseTableViewDelegate;
+
+- (void)reloadTableVieWithDataSourceArray:(NSMutableArray<NewsItem *>*)dataSourceArray withKeyWord:(NSString *)keyword;
+
+
 @end
