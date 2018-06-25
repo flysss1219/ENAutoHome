@@ -88,6 +88,14 @@
 		18EE21CC20CB82180030FD98 /* ENHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE21CB20CB82180030FD98 /* ENHomePageViewController.m */; };
 		18EE21CF20CB82250030FD98 /* ENNewsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE21CE20CB82250030FD98 /* ENNewsMainViewController.m */; };
 		18EE21D620CB874B0030FD98 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE21D520CB874B0030FD98 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6A1CFAC420E08AB2007C68E5 /* LookMyEnterPriseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CFAC320E08AB2007C68E5 /* LookMyEnterPriseView.m */; };
+		6A1CFAC620E08ACB007C68E5 /* LookMyEnterPriseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1CFAC520E08ACB007C68E5 /* LookMyEnterPriseView.xib */; };
+		6A1CFADC20E0914F007C68E5 /* TSCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CFAD620E0914F007C68E5 /* TSCacheManager.m */; };
+		6A1CFADD20E0914F007C68E5 /* JZLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CFAD920E0914F007C68E5 /* JZLocationConverter.m */; };
+		6A1CFADE20E0914F007C68E5 /* NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CFADB20E0914F007C68E5 /* NavigationManager.m */; };
+		6A1CFAE220E091CE007C68E5 /* CurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CFAE120E091CE007C68E5 /* CurrentUser.m */; };
+		6A1CFAE820E0E9E5007C68E5 /* BranchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CFAE720E0E9E5007C68E5 /* BranchListViewController.m */; };
+		6A1CFAEB20E0EFBB007C68E5 /* TSMarqueeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1CFAEA20E0EFBB007C68E5 /* TSMarqueeView.m */; };
 		6A1F24CD20DB93C500163C99 /* CarBranchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F24CC20DB93C500163C99 /* CarBranchView.m */; };
 		6A1F24D020DB93EC00163C99 /* BranchIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F24CF20DB93EC00163C99 /* BranchIcon.m */; };
 		6A1F24D520DB992400163C99 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A1F24D720DB992400163C99 /* Localizable.strings */; };
@@ -363,6 +371,21 @@
 		18EE21D420CB874B0030FD98 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		18EE21D520CB874B0030FD98 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		2FDA55C9A220388774E2EB65 /* Pods-EnterPriseIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnterPriseIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnterPriseIn/Pods-EnterPriseIn.release.xcconfig"; sourceTree = "<group>"; };
+		6A1CFAC220E08AB2007C68E5 /* LookMyEnterPriseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LookMyEnterPriseView.h; sourceTree = "<group>"; };
+		6A1CFAC320E08AB2007C68E5 /* LookMyEnterPriseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookMyEnterPriseView.m; sourceTree = "<group>"; };
+		6A1CFAC520E08ACB007C68E5 /* LookMyEnterPriseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LookMyEnterPriseView.xib; sourceTree = "<group>"; };
+		6A1CFAD520E0914F007C68E5 /* TSCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCacheManager.h; sourceTree = "<group>"; };
+		6A1CFAD620E0914F007C68E5 /* TSCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCacheManager.m; sourceTree = "<group>"; };
+		6A1CFAD820E0914F007C68E5 /* JZLocationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLocationConverter.h; sourceTree = "<group>"; };
+		6A1CFAD920E0914F007C68E5 /* JZLocationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLocationConverter.m; sourceTree = "<group>"; };
+		6A1CFADA20E0914F007C68E5 /* NavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationManager.h; sourceTree = "<group>"; };
+		6A1CFADB20E0914F007C68E5 /* NavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationManager.m; sourceTree = "<group>"; };
+		6A1CFAE020E091CE007C68E5 /* CurrentUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentUser.h; sourceTree = "<group>"; };
+		6A1CFAE120E091CE007C68E5 /* CurrentUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentUser.m; sourceTree = "<group>"; };
+		6A1CFAE620E0E9E5007C68E5 /* BranchListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BranchListViewController.h; sourceTree = "<group>"; };
+		6A1CFAE720E0E9E5007C68E5 /* BranchListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BranchListViewController.m; sourceTree = "<group>"; };
+		6A1CFAE920E0EFBB007C68E5 /* TSMarqueeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSMarqueeView.h; sourceTree = "<group>"; };
+		6A1CFAEA20E0EFBB007C68E5 /* TSMarqueeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSMarqueeView.m; sourceTree = "<group>"; };
 		6A1F24CB20DB93C500163C99 /* CarBranchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarBranchView.h; sourceTree = "<group>"; };
 		6A1F24CC20DB93C500163C99 /* CarBranchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarBranchView.m; sourceTree = "<group>"; };
 		6A1F24CE20DB93EC00163C99 /* BranchIcon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BranchIcon.h; sourceTree = "<group>"; };
@@ -595,6 +618,8 @@
 				181E977220DA9C140016C06E /* EmptyView.m */,
 				181E977320DA9C140016C06E /* NetworkErrorView.h */,
 				181E977420DA9C140016C06E /* NetworkErrorView.xib */,
+				6A1CFAE920E0EFBB007C68E5 /* TSMarqueeView.h */,
+				6A1CFAEA20E0EFBB007C68E5 /* TSMarqueeView.m */,
 			);
 			path = FunctionViews;
 			sourceTree = "<group>";
@@ -677,6 +702,9 @@
 			children = (
 				18A77C5720DF5C69006D3254 /* ENShareAppView.h */,
 				18A77C5820DF5C69006D3254 /* ENShareAppView.m */,
+				6A1CFAC220E08AB2007C68E5 /* LookMyEnterPriseView.h */,
+				6A1CFAC320E08AB2007C68E5 /* LookMyEnterPriseView.m */,
+				6A1CFAC520E08ACB007C68E5 /* LookMyEnterPriseView.xib */,
 				18A77C5C20DF63BE006D3254 /* PersonHeadView.h */,
 				18A77C5D20DF63BE006D3254 /* PersonHeadView.m */,
 				18A77C5F20DF63CF006D3254 /* PersonHeadView.xib */,
@@ -724,6 +752,9 @@
 		18EE20F220CB7E690030FD98 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				6A1CFADF20E091A7007C68E5 /* CurrentUser */,
+				6A1CFAD420E0914F007C68E5 /* CacheManager */,
+				6A1CFAD720E0914F007C68E5 /* MapManager */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -923,6 +954,8 @@
 				6A1F24C920DB91B900163C99 /* Subviews */,
 				18EE21C120CB81D80030FD98 /* ENEnterViewController.h */,
 				18EE21C220CB81D80030FD98 /* ENEnterViewController.m */,
+				6A1CFAE620E0E9E5007C68E5 /* BranchListViewController.h */,
+				6A1CFAE720E0E9E5007C68E5 /* BranchListViewController.m */,
 			);
 			path = EnterMain;
 			sourceTree = "<group>";
@@ -977,6 +1010,35 @@
 				18EE21D520CB874B0030FD98 /* GTMBase64.m */,
 			);
 			path = Base64;
+			sourceTree = "<group>";
+		};
+		6A1CFAD420E0914F007C68E5 /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				6A1CFAD520E0914F007C68E5 /* TSCacheManager.h */,
+				6A1CFAD620E0914F007C68E5 /* TSCacheManager.m */,
+			);
+			path = CacheManager;
+			sourceTree = "<group>";
+		};
+		6A1CFAD720E0914F007C68E5 /* MapManager */ = {
+			isa = PBXGroup;
+			children = (
+				6A1CFAD820E0914F007C68E5 /* JZLocationConverter.h */,
+				6A1CFAD920E0914F007C68E5 /* JZLocationConverter.m */,
+				6A1CFADA20E0914F007C68E5 /* NavigationManager.h */,
+				6A1CFADB20E0914F007C68E5 /* NavigationManager.m */,
+			);
+			path = MapManager;
+			sourceTree = "<group>";
+		};
+		6A1CFADF20E091A7007C68E5 /* CurrentUser */ = {
+			isa = PBXGroup;
+			children = (
+				6A1CFAE020E091CE007C68E5 /* CurrentUser.h */,
+				6A1CFAE120E091CE007C68E5 /* CurrentUser.m */,
+			);
+			path = CurrentUser;
 			sourceTree = "<group>";
 		};
 		6A1F24C120DB919900163C99 /* Model */ = {
@@ -1436,6 +1498,7 @@
 			files = (
 				18355F3E20CB736700F5B22D /* LaunchScreen.storyboard in Resources */,
 				18355F3B20CB736700F5B22D /* Assets.xcassets in Resources */,
+				6A1CFAC620E08ACB007C68E5 /* LookMyEnterPriseView.xib in Resources */,
 				181E977720DA9C140016C06E /* NetworkErrorView.xib in Resources */,
 				6A1F24D520DB992400163C99 /* Localizable.strings in Resources */,
 				18A77C5420DF5C07006D3254 /* ApplyEnterpriseEnterView.xib in Resources */,
@@ -1521,6 +1584,7 @@
 				6A1F25C420DBAAA700163C99 /* YYTextContainerView.m in Sources */,
 				18EE21C320CB81D80030FD98 /* ENEnterViewController.m in Sources */,
 				18EE218D20CB7E690030FD98 /* TADotView.m in Sources */,
+				6A1CFAEB20E0EFBB007C68E5 /* TSMarqueeView.m in Sources */,
 				6A1F25B920DBAAA700163C99 /* UIImageView+YYWebImage.m in Sources */,
 				6A1F25D720DBAAA700163C99 /* YYTextView.m in Sources */,
 				6A4C128920DD02FC0032E079 /* NewsItem.m in Sources */,
@@ -1529,6 +1593,7 @@
 				6A1F259620DBAAA700163C99 /* NSDate+YYAdd.m in Sources */,
 				18EE21A320CB7E690030FD98 /* NSString+MD5.m in Sources */,
 				18EE21AB20CB7E690030FD98 /* CryptFunction.m in Sources */,
+				6A1CFADD20E0914F007C68E5 /* JZLocationConverter.m in Sources */,
 				6A1F25AA20DBAAA700163C99 /* UIGestureRecognizer+YYAdd.m in Sources */,
 				6A1F25D620DBAAA700163C99 /* YYLabel.m in Sources */,
 				6A1F259E20DBAAA700163C99 /* NSString+YYAdd.m in Sources */,
@@ -1541,6 +1606,7 @@
 				18EE219E20CB7E690030FD98 /* NSDictionary+StringValue.m in Sources */,
 				6A1F25D820DBAAA700163C99 /* YYAsyncLayer.m in Sources */,
 				18EE219B20CB7E690030FD98 /* UIImage+MyBlur.m in Sources */,
+				6A1CFAE820E0E9E5007C68E5 /* BranchListViewController.m in Sources */,
 				6A1F25AF20DBAAA700163C99 /* UITextField+YYAdd.m in Sources */,
 				6A1F25DD20DBAAA700163C99 /* YYReachability.m in Sources */,
 				6A1F25A120DBAAA700163C99 /* CALayer+YYAdd.m in Sources */,
@@ -1587,6 +1653,7 @@
 				6A1F25AB20DBAAA700163C99 /* UIImage+YYAdd.m in Sources */,
 				18EE21C920CB82000030FD98 /* ENPersonViewController.m in Sources */,
 				18EE218B20CB7E690030FD98 /* UIView+SDExtension.m in Sources */,
+				6A1CFAC420E08AB2007C68E5 /* LookMyEnterPriseView.m in Sources */,
 				6A1F25B420DBAAA700163C99 /* YYMemoryCache.m in Sources */,
 				18EE218C20CB7E690030FD98 /* SDCollectionViewCell.m in Sources */,
 				6A1F259C20DBAAA700163C99 /* NSObject+YYAddForARC.m in Sources */,
@@ -1622,6 +1689,7 @@
 				18EE217A20CB7E690030FD98 /* WebViewJavascriptBridgeBase.m in Sources */,
 				18EE218820CB7E690030FD98 /* MBProgressHUD+MJ.m in Sources */,
 				6A1F25B620DBAAA700163C99 /* CALayer+YYWebImage.m in Sources */,
+				6A1CFADC20E0914F007C68E5 /* TSCacheManager.m in Sources */,
 				18EE21CC20CB82180030FD98 /* ENHomePageViewController.m in Sources */,
 				6A1F25B120DBAAA700163C99 /* YYCache.m in Sources */,
 				6A1F25BE20DBAAA700163C99 /* YYImageCoder.m in Sources */,
@@ -1661,9 +1729,11 @@
 				6A1F25BC20DBAAA700163C99 /* YYImage.m in Sources */,
 				6A1F24CD20DB93C500163C99 /* CarBranchView.m in Sources */,
 				6A1F259820DBAAA700163C99 /* NSKeyedUnarchiver+YYAdd.m in Sources */,
+				6A1CFAE220E091CE007C68E5 /* CurrentUser.m in Sources */,
 				6A1F25E620DBB12600163C99 /* BranchScrollView.m in Sources */,
 				18EE218620CB7E690030FD98 /* KeyChainSaveUUID.m in Sources */,
 				18EE219820CB7E690030FD98 /* NSString+Pinyin.m in Sources */,
+				6A1CFADE20E0914F007C68E5 /* NavigationManager.m in Sources */,
 				18EE21CF20CB82250030FD98 /* ENNewsMainViewController.m in Sources */,
 				18EE217F20CB7E690030FD98 /* SVProgressAnimatedView.m in Sources */,
 				6A1F25A720DBAAA700163C99 /* UIControl+YYAdd.m in Sources */,

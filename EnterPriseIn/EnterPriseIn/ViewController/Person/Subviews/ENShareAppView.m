@@ -9,7 +9,7 @@
 #import "ENShareAppView.h"
 #import "BranchIcon.h"
 
-@interface ENShareAppView()
+@interface ENShareAppView()<BranchIconSelectDelegate>
 
 @property (nonatomic, strong) UILabel *titleLabel;
 
@@ -22,8 +22,8 @@
 }
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        
-        
+        self.backgroundColor = [UIColor whiteColor];
+        [self makeUI];
     }
     return self;
 }
@@ -45,14 +45,22 @@
     
     [self addSubview:self.titleLabel];
     
-    CGFloat y = 20;
+    CGFloat y = 40;
     CGFloat x = 17.5;
     CGFloat width = (KDeviceWidth-35-20*3)/4;
-    CGFloat height = width+40
+    CGFloat height = width+20;
     for (int i = 0; i< 4; i++) {
-//        BranchIcon *icon = [BranchIcon alloc]initWithFrame:CGRectMake(x,y, <#CGFloat width#>, <#CGFloat height#>) andImageStr:<#(NSString *)#> title:<#(NSString *)#>
-        
+        BranchIcon *icon = [[BranchIcon alloc]initWithFrame:CGRectMake(x+(width+20)*i,y, width, height) andImageStr:_imagesArr[i] title:_titlesArr[i]];
+        icon.delegate = self;
+        icon.tag = 100+i;
+        [self addSubview:icon];
     }
+    
+}
+
+#pragma mark - BranchIconSelectDelegate
+- (void)branchIconDidSelect:(NSInteger)index{
+    
 }
 
 

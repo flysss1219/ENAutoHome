@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class CarBranchView;
+
+@protocol CarBranchViewDelegate<NSObject>
+
+- (void)carBranchViewDidSelect:(NSInteger)index andMenuId:(NSString*)menuId;
+@end
+
 @interface CarBranchView : UIView
+
+@property (nonatomic, weak) id<CarBranchViewDelegate> menuDelegate;
 
 - (CGFloat)setCarBranchForData:(NSArray*)data andBranchTitle:(NSString*)title andInitTag:(NSInteger)tag;
 

@@ -13,7 +13,7 @@
 
 @optional
 
-- (void)userInfoViewEditUserAccount;
+
 
 @end
 

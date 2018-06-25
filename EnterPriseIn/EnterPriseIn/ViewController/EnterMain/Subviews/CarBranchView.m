@@ -61,8 +61,10 @@ const CGFloat kBranchGap = 15.0f;
 }
 
 #pragma mark -BranchIconSelectDelegate
-- (void)branchIconDidSelect:(NSInteger)index{
-    
+- (void)branchIconDidSelect:(NSInteger)index andMenuId:(NSString *)menuId{
+    if (_menuDelegate && [_menuDelegate respondsToSelector:@selector(carBranchViewDidSelect:andMenuId:)]) {
+        [_menuDelegate carBranchViewDidSelect:index andMenuId:menuId];
+    }
     
 }
 

@@ -10,6 +10,7 @@
 #import "PersonHeadView.h"
 #import "ENShareAppView.h"
 #import "UserAccountInfoView.h"
+#import "LookMyEnterPriseView.h"
 
 @interface ENPersonViewController ()<UIScrollViewDelegate,UserAccountInfoViewDelegate>
 
@@ -19,11 +20,19 @@
 
 @property (nonatomic, strong) UserAccountInfoView *infoView;
 
+@property (nonatomic, strong) LookMyEnterPriseView *enterpriseView;
+
 @property (nonatomic, strong) ENShareAppView *shareView;
 
 @end
 
 @implementation ENPersonViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,11 +43,19 @@
 }
 - (void)readyView{
     
+    if (@available(iOS 11.0, *)) {
+        self.mainScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets =NO;
+    }
+    self.view.backgroundColor = ThemebgViewColor;
     [self.view addSubview:self.mainScrollView];
-    self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth, KDeviceHeight-64);
+    self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth, KDeviceHeight);
     [self.mainScrollView addSubview:self.personHeadView];
     [self.mainScrollView addSubview:self.infoView];
+    [self.mainScrollView addSubview:self.enterpriseView];
     [self.mainScrollView addSubview:self.shareView];
+    
     
     WS(ws);
     [self.mainScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -54,11 +71,28 @@
         make.height.mas_equalTo(130);
     }];
     [self.infoView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(ws.personHeadView.mas_bottom);
+        make.top.equalTo(ws.personHeadView.mas_bottom).with.offset(10);
         make.left.equalTo(ws.mainScrollView.mas_left);
         make.width.mas_equalTo(KDeviceWidth);
         make.height.mas_equalTo(120);
     }];
+    [self.enterpriseView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(ws.infoView.mas_bottom);
+        make.left.equalTo(ws.mainScrollView.mas_left);
+        make.width.mas_equalTo(KDeviceWidth);
+        make.height.mas_equalTo(60);
+    }];
+    [self.shareView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(ws.enterpriseView.mas_bottom).with.offset(10);
+        make.left.equalTo(ws.mainScrollView.mas_left);
+        make.width.mas_equalTo(KDeviceWidth);
+        make.height.mas_equalTo(140);
+    }];
+}
+
+
+- (void)updateUserInfo{
+    
 }
 
 #pragma mark - UserAccountInfoViewDelegate
@@ -74,11 +108,11 @@
 #pragma mark - getter
 - (UIScrollView *)mainScrollView {
     if (!_mainScrollView) {
-        _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,0, KDeviceWidth, KDeviceHeight-49-64)];
+        _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,0, KDeviceWidth, KDeviceHeight-49)];
         _mainScrollView.showsVerticalScrollIndicator = NO;
         _mainScrollView.showsHorizontalScrollIndicator = NO;
         _mainScrollView.delegate = self;
-        _mainScrollView.backgroundColor = [UIColor whiteColor];
+        _mainScrollView.backgroundColor = ThemebgViewColor;
         _mainScrollView.scrollEnabled = YES;
     }
     return _mainScrollView;
@@ -95,6 +129,14 @@
         _infoView.delegate = self;
     }
     return _infoView;
+}
+
+- (LookMyEnterPriseView*)enterpriseView{
+    if (!_enterpriseView) {
+        _enterpriseView = [[[NSBundle mainBundle]loadNibNamed:@"LookMyEnterPriseView" owner:self options:nil]lastObject];
+        
+    }
+    return _enterpriseView;
 }
 
 - (ENShareAppView*)shareView{

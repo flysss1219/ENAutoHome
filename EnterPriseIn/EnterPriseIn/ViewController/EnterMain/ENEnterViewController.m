@@ -10,18 +10,20 @@
 #import "CarBranchView.h"
 #import "YYFPSLabel.h"
 #import "BranchScrollView.h"
-@interface ENEnterViewController ()<UIScrollViewDelegate,BranchScrollViewDelegate>
+#import "BranchListViewController.h"
+
+@interface ENEnterViewController ()<UIScrollViewDelegate,BranchScrollViewDelegate,CarBranchViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *mainScrollView;
 @property (nonatomic, strong) BranchScrollView *branchView;
-
+@property (nonatomic, strong) UIImageView *headImageView;
 @property (nonatomic, strong) YYFPSLabel *fpsLabel;
 
 @end
 
 @implementation ENEnterViewController
 {
-    NSMutableArray *_offsetArr;//记录每个分类模块的最大y值
+    NSMutableArray *_offsetArr;//记录每个分类模块的最大高度值
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,6 +35,7 @@
 - (void)readyView{
     self.view.backgroundColor = [UIColor colorWithHex:0xf8f8f8];
     [self.view addSubview:self.mainScrollView];
+    [self.mainScrollView addSubview:self.headImageView];
     [self.view addSubview:self.branchView];
     
     _fpsLabel = [YYFPSLabel new];
@@ -45,16 +48,21 @@
 
 - (void)initData{
     
+    
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:@"http://img.berui8.com/hefei/brzy/2018/05/20180511/3991W1526033145.png"]];
+    
     _offsetArr = [NSMutableArray arrayWithCapacity:5];
     
-    CGFloat y = 0.f;
+    CGFloat y = 150.f;
     for (int i = 0; i<5; i++) {
 
         CarBranchView *branchView = [[CarBranchView alloc]initWithFrame:CGRectMake(0,0, KDeviceWidth-100, KDeviceHeight)];
+        branchView.menuDelegate = self;
         CGFloat height = [branchView setCarBranchForData:@[@"奥迪",@"宝马",@"奔驰",@"阿斯顿马丁",@"劳斯莱斯",@"别克",@"雪佛兰",@"丰田",@"东风小康"] andBranchTitle:NSLocalizedString(@"AppName", nil) andInitTag:100];
         branchView.frame = CGRectMake(0, y,KDeviceWidth-100, height);
         [self.mainScrollView addSubview:branchView];
-        [_offsetArr addObject:@(height)];
+        
+        [_offsetArr addObject:@(y)];
         y += height;
     }
     
@@ -100,22 +108,33 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
-    CGFloat contentOffset_Y = scrollView.contentOffset.y;
+//    CGFloat contentOffset_Y = scrollView.contentOffset.y;
+//    if (scrollView == self.mainScrollView) {
+//
+//        if (contentOffset_Y >= [_offsetArr[0] floatValue]) {
+//            [self.branchView branchButtonDidSelect:0];
+//        }else if (contentOffset_Y >= [_offsetArr[1] floatValue]){
+//            [self.branchView branchButtonDidSelect:1];
+//        }else if (contentOffset_Y >= [_offsetArr[2] floatValue]){
+//            [self.branchView branchButtonDidSelect:2];
+//        }else if (contentOffset_Y >= [_offsetArr[3] floatValue]){
+//            [self.branchView branchButtonDidSelect:3];
+//        }else if (contentOffset_Y >= [_offsetArr[4] floatValue]){
+//            [self.branchView branchButtonDidSelect:5];
+//        }
+//    }
     
-    if (scrollView == self.mainScrollView) {
-        if (contentOffset_Y >= [_offsetArr[0] floatValue]) {
-            [self.branchView branchButtonDidSelect:0];
-        }else if (contentOffset_Y >= [_offsetArr[1] floatValue]){
-            [self.branchView branchButtonDidSelect:1];
-        }else if (contentOffset_Y >= [_offsetArr[2] floatValue]){
-            [self.branchView branchButtonDidSelect:2];
-        }else if (contentOffset_Y >= [_offsetArr[3] floatValue]){
-            [self.branchView branchButtonDidSelect:3];
-        }else if (contentOffset_Y >= [_offsetArr[4] floatValue]){
-            [self.branchView branchButtonDidSelect:5];
-        }
-    }
+    
 }
+
+#pragma mark - CarBranchViewDelegate
+- (void)carBranchViewDidSelect:(NSInteger)index andMenuId:(NSString*)menuId{
+    
+    BranchListViewController *vc = [[BranchListViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
 
 #pragma mark - BranchScrollViewDelegate
 - (void)branchViewDidSelectInside:(NSInteger)index{
@@ -135,9 +154,17 @@
     return _mainScrollView;
 }
 
+- (UIImageView*)headImageView{
+    if (!_headImageView) {
+        _headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0,0, KDeviceWidth-100, 150)];
+        _headImageView.image = [UIImage imageNamed:@"zxpic"];
+    }
+    return _headImageView;
+}
+
 - (BranchScrollView*)branchView{
     if (!_branchView) {
-        _branchView = [[BranchScrollView alloc]initWithFrame:CGRectMake(0, 0, 100, KDeviceHeight-49-64)];
+        _branchView = [[BranchScrollView alloc]initWithFrame:CGRectMake(0,0,100, KDeviceHeight-49-64)];
         _branchView.showsVerticalScrollIndicator = NO;
         _branchView.showsHorizontalScrollIndicator = NO;
         _branchView.delegate = self;

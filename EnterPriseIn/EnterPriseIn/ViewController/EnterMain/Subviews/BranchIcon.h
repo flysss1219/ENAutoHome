@@ -12,7 +12,7 @@
 @class BranchIcon;
 @protocol BranchIconSelectDelegate<NSObject>
 @optional
-- (void)branchIconDidSelect:(NSInteger)index;
+- (void)branchIconDidSelect:(NSInteger)index andMenuId:(NSString*)menuId;
 
 @end
 

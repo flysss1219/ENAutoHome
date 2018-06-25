@@ -57,8 +57,8 @@
 }
 
 - (void)iconDidSelect{
-    if (_delegate && [_delegate respondsToSelector:@selector(branchIconDidSelect:)]) {
-        [_delegate branchIconDidSelect:self.tag];
+    if (_delegate && [_delegate respondsToSelector:@selector(branchIconDidSelect: andMenuId:)]) {
+        [_delegate branchIconDidSelect:self.tag andMenuId:@""];
     }
 }
 

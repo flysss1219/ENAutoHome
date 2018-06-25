@@ -11,10 +11,11 @@
 #import "BusinessTableView.h"
 #import "MainBranchView.h"
 #import <Masonry.h>
+#import "TSMarqueeView.h"
 
 const CGFloat kBannerHeight = 200;
 
-@interface ENHomePageViewController ()<UIScrollViewDelegate,SDCycleScrollViewDelegate,UISearchBarDelegate,UITextFieldDelegate>
+@interface ENHomePageViewController ()<UIScrollViewDelegate,SDCycleScrollViewDelegate,UISearchBarDelegate,UITextFieldDelegate,TSMarqueeViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *mainScrollView;
 
@@ -23,6 +24,10 @@ const CGFloat kBannerHeight = 200;
 @property (nonatomic, strong) MainBranchView *mainBranchView;
 
 @property (nonatomic, strong) BusinessTableView *businessTableView;
+
+@property (nonatomic, strong) UIView *marqueeNewsView;
+
+@property (nonatomic, strong) TSMarqueeView *marqueeView;
 
 @property (nonatomic, strong) UISearchBar *searchBar;
 
@@ -48,7 +53,9 @@ const CGFloat kBannerHeight = 200;
     [self.mainScrollView addSubview:self.bannerView];
     [self.mainScrollView addSubview:self.mainBranchView];
     [self.mainScrollView addSubview:self.searchBar];
-//    [self.mainScrollView addSubview:self.searchField];
+    
+    [self.mainScrollView addSubview:self.marqueeNewsView];
+    [self.marqueeNewsView addSubview:self.marqueeView];
     [self.mainScrollView addSubview:self.businessTableView];
     
     WS(ws);
@@ -78,8 +85,15 @@ const CGFloat kBannerHeight = 200;
         make.height.mas_equalTo(40);
     }];
 
-    [self.businessTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.marqueeNewsView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(ws.mainBranchView.mas_bottom);
+        make.left.equalTo(ws.mainScrollView.mas_left);
+        make.width.mas_equalTo(KDeviceWidth);
+        make.height.mas_equalTo(50);
+    }];
+    
+    [self.businessTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(ws.marqueeNewsView.mas_bottom);
         make.left.equalTo(ws.mainScrollView.mas_left);
         make.width.mas_equalTo(KDeviceWidth);
     }];
@@ -104,6 +118,8 @@ const CGFloat kBannerHeight = 200;
        make.height.mas_equalTo(5*100+40);
     }];
     
+    self.marqueeView.textDataArr = @[@"空港大城，司机璀璨，鸟居世界",@"恒大阳光半岛",@"合肥市徽州大道与芜湖路交口安徽大剧院"];
+    [self.marqueeView startScrollBottomToTopWithNoSpace];
     
     self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth,kBannerHeight+branchHeight+self.businessTableView.height+40);
     
@@ -168,6 +184,39 @@ const CGFloat kBannerHeight = 200;
     }
     return _businessTableView;
 }
+
+- (UIView*)marqueeNewsView{
+    if (!_marqueeNewsView) {
+        _marqueeNewsView = [[UIView alloc]initWithFrame:CGRectZero];
+        _marqueeNewsView.backgroundColor = [UIColor colorWithHex:0xe5e5e5];
+        UIImageView *bgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KDeviceWidth, 40)];
+        bgImageView.image = [UIImage imageNamed:@"newsbg"];
+        bgImageView.userInteractionEnabled = YES;
+        [_marqueeNewsView addSubview:bgImageView];
+        
+        UIImageView *newsImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 12,50,15)];
+        newsImageView.image = [UIImage imageNamed:@"news"];
+        [_marqueeNewsView addSubview:newsImageView];
+        
+        
+    }
+    return _marqueeNewsView;
+}
+
+- (TSMarqueeView*)marqueeView{
+    if (!_marqueeView) {
+        _marqueeView = [[TSMarqueeView alloc]initWithFrame:CGRectMake(65, 10, KDeviceWidth-65, 20)];
+        _marqueeView.delegate            = self;
+        _marqueeView.textStayTime        = 2;
+        _marqueeView.scrollAnimationTime = 1;
+        _marqueeView.backgroundColor     = [UIColor clearColor];
+        _marqueeView.textColor           = MainTitleColor;
+        _marqueeView.textFont            = [UIFont systemFontOfSize:14.f];
+        _marqueeView.touchEnable         = YES;
+    }
+    return _marqueeView;
+}
+
 
 - (UITextField*)searchField{
     if (!_searchField) {
