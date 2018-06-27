@@ -1,27 +1,25 @@
 //
-//  ENEditInfomationViewController.m
+//  ENSetAddressViewController.m
 //  EnterPriseIn
 //
-//  Created by 陶顺顺 on 2018/6/26.
+//  Created by 陶顺顺 on 2018/6/27.
 //  Copyright © 2018年 com.shun. All rights reserved.
 //
 
-#import "ENEditInfomationViewController.h"
+#import "ENSetAddressViewController.h"
 
-@interface ENEditInfomationViewController ()
+@interface ENSetAddressViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *addressField;
 
-@property (weak, nonatomic) IBOutlet UITextField *userField;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UITextField *adressField;
 
-@property (weak, nonatomic) IBOutlet UITextField *demandField;
-
-@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UIButton *areaButton;
+
 
 @end
 
-@implementation ENEditInfomationViewController
+@implementation ENSetAddressViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,16 +30,10 @@
 
 
 
-- (IBAction)closeEditInfo:(UIButton *)sender {
+- (IBAction)saveAddress:(UIButton *)sender {
 }
 
-
-- (IBAction)submitEnterpriseInfomation:(UIButton *)sender {
-    
-}
-
-- (IBAction)selectAddressArea:(UIButton *)sender {
-    
+- (IBAction)selectArea:(UIButton *)sender {
 }
 
 

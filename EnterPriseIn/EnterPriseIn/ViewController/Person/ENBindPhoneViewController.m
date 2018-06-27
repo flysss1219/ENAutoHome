@@ -1,49 +1,35 @@
 //
-//  ENFindPwdViewController.m
+//  ENBindPhoneViewController.m
 //  EnterPriseIn
 //
-//  Created by 陶顺顺 on 2018/6/26.
+//  Created by 陶顺顺 on 2018/6/27.
 //  Copyright © 2018年 com.shun. All rights reserved.
 //
 
-#import "ENFindPwdViewController.h"
+#import "ENBindPhoneViewController.h"
 
-@interface ENFindPwdViewController ()
+@interface ENBindPhoneViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *accountField;
+@property (weak, nonatomic) IBOutlet UIButton *bindButton;
 
-@property (weak, nonatomic) IBOutlet UITextField *vetifyField;
+@property (weak, nonatomic) IBOutlet UITextField *codeField;
 
-@property (weak, nonatomic) IBOutlet UITextField *resetPwdField;
+@property (weak, nonatomic) IBOutlet UIButton *sendCodeBtn;
 
-@property (weak, nonatomic) IBOutlet UITextField *confirmField;
-
-@property (weak, nonatomic) IBOutlet UIButton *submitButton;
-
-@property (weak, nonatomic) IBOutlet UIButton *sendCodeButton;
+@property (weak, nonatomic) IBOutlet UITextField *phoneField;
 
 
 @end
 
-@implementation ENFindPwdViewController
+@implementation ENBindPhoneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
+    // Do any additional setup after loading the view from its nib.
 }
 
 
-
-
-
-- (IBAction)closeFindPwd:(UIButton *)sender {
-    
-}
-
-- (IBAction)submitResetPassword:(UIButton *)sender {
-    
+- (IBAction)bindUserPhone:(UIButton *)sender {
     
 }
 
@@ -51,7 +37,6 @@
     
     
 }
-
 
 
 - (void)didReceiveMemoryWarning {

@@ -11,6 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ENFindPwdViewController">
             <connections>
+                <outlet property="accountField" destination="TVq-Yb-G0A" id="2aa-B5-qW3"/>
+                <outlet property="confirmField" destination="Dld-Uh-16m" id="NOv-ag-lQp"/>
+                <outlet property="resetPwdField" destination="dfC-6Q-P9M" id="mBd-IQ-XHm"/>
+                <outlet property="sendCodeButton" destination="EuH-eH-b02" id="Oq1-Oc-eL9"/>
+                <outlet property="submitButton" destination="01h-EG-Dgl" id="vFK-X5-DKG"/>
+                <outlet property="vetifyField" destination="AkA-A6-QSb" id="oBV-9g-c22"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,13 +35,16 @@
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zF4-E2-8ae">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zF4-E2-8ae">
                     <rect key="frame" x="17.5" y="17.5" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="DzM-hU-C5T"/>
                         <constraint firstAttribute="height" constant="40" id="zE4-yu-wUM"/>
                     </constraints>
-                    <state key="normal" title="close"/>
+                    <state key="normal" image="nav_icon_close"/>
+                    <connections>
+                        <action selector="closeFindPwd:" destination="-1" eventType="touchUpInside" id="ewK-Iy-NzU"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮箱/手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xM-cv-T1r">
                     <rect key="frame" x="47.5" y="205" width="120" height="20"/>
@@ -124,6 +133,9 @@
                     <state key="normal" title="确认">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="submitResetPassword:" destination="-1" eventType="touchUpInside" id="iJq-cR-kV9"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuH-eH-b02">
                     <rect key="frame" x="247.5" y="253" width="80" height="30"/>
@@ -136,6 +148,9 @@
                     <state key="normal" title="发送验证码">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="sendVertifyCode:" destination="-1" eventType="touchUpInside" id="4hb-rW-Qx6"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYT-Sp-8oJ">
                     <rect key="frame" x="47" y="442" width="280" height="0.5"/>
@@ -216,4 +231,7 @@
             <point key="canvasLocation" x="137" y="101"/>
         </view>
     </objects>
+    <resources>
+        <image name="nav_icon_close" width="44" height="44"/>
+    </resources>
 </document>

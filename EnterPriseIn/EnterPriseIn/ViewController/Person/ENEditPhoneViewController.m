@@ -1,27 +1,28 @@
 //
-//  ENEditInfomationViewController.m
+//  ENEditPhoneViewController.m
 //  EnterPriseIn
 //
-//  Created by 陶顺顺 on 2018/6/26.
+//  Created by 陶顺顺 on 2018/6/27.
 //  Copyright © 2018年 com.shun. All rights reserved.
 //
 
-#import "ENEditInfomationViewController.h"
+#import "ENEditPhoneViewController.h"
 
-@interface ENEditInfomationViewController ()
+@interface ENEditPhoneViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *addressField;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 
-@property (weak, nonatomic) IBOutlet UITextField *userField;
+@property (weak, nonatomic) IBOutlet UITextField *codeField;
 
-@property (weak, nonatomic) IBOutlet UITextField *demandField;
+@property (weak, nonatomic) IBOutlet UIButton *sendCodeBtn;
 
-@property (weak, nonatomic) IBOutlet UIButton *submitButton;
-@property (weak, nonatomic) IBOutlet UIButton *areaButton;
+@property (weak, nonatomic) IBOutlet UIButton *resetBtn;
+
+
 
 @end
 
-@implementation ENEditInfomationViewController
+@implementation ENEditPhoneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,16 +32,11 @@
 
 
 
-
-- (IBAction)closeEditInfo:(UIButton *)sender {
+- (IBAction)sendVertifyCode:(UIButton *)sender {
 }
 
-
-- (IBAction)submitEnterpriseInfomation:(UIButton *)sender {
+- (IBAction)resetUserPhoneNumber:(id)sender {
     
-}
-
-- (IBAction)selectAddressArea:(UIButton *)sender {
     
 }
 

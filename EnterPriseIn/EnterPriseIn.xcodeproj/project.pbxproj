@@ -11,6 +11,14 @@
 		181E977520DA9C140016C06E /* NetworkErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181E977120DA9C140016C06E /* NetworkErrorView.m */; };
 		181E977620DA9C140016C06E /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181E977220DA9C140016C06E /* EmptyView.m */; };
 		181E977720DA9C140016C06E /* NetworkErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181E977420DA9C140016C06E /* NetworkErrorView.xib */; };
+		182CDF4320E3CB190095827C /* ENEditPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDF4120E3CB190095827C /* ENEditPhoneViewController.m */; };
+		182CDF4420E3CB190095827C /* ENEditPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDF4220E3CB190095827C /* ENEditPhoneViewController.xib */; };
+		182CDF4820E3CB330095827C /* ENSetAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDF4620E3CB330095827C /* ENSetAddressViewController.m */; };
+		182CDF4920E3CB330095827C /* ENSetAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDF4720E3CB330095827C /* ENSetAddressViewController.xib */; };
+		182CDF4D20E3CB520095827C /* ENSetNickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDF4B20E3CB520095827C /* ENSetNickViewController.m */; };
+		182CDF4E20E3CB520095827C /* ENSetNickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDF4C20E3CB520095827C /* ENSetNickViewController.xib */; };
+		182CDF5220E3CF960095827C /* ENBindPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDF5020E3CF960095827C /* ENBindPhoneViewController.m */; };
+		182CDF5320E3CF960095827C /* ENBindPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDF5120E3CF960095827C /* ENBindPhoneViewController.xib */; };
 		18355F3320CB736700F5B22D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18355F3220CB736700F5B22D /* AppDelegate.m */; };
 		18355F3920CB736700F5B22D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18355F3720CB736700F5B22D /* Main.storyboard */; };
 		18355F3B20CB736700F5B22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18355F3A20CB736700F5B22D /* Assets.xcassets */; };
@@ -224,6 +232,18 @@
 		181E977220DA9C140016C06E /* EmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyView.m; sourceTree = "<group>"; };
 		181E977320DA9C140016C06E /* NetworkErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkErrorView.h; sourceTree = "<group>"; };
 		181E977420DA9C140016C06E /* NetworkErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkErrorView.xib; sourceTree = "<group>"; };
+		182CDF4020E3CB190095827C /* ENEditPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENEditPhoneViewController.h; sourceTree = "<group>"; };
+		182CDF4120E3CB190095827C /* ENEditPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENEditPhoneViewController.m; sourceTree = "<group>"; };
+		182CDF4220E3CB190095827C /* ENEditPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ENEditPhoneViewController.xib; sourceTree = "<group>"; };
+		182CDF4520E3CB330095827C /* ENSetAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENSetAddressViewController.h; sourceTree = "<group>"; };
+		182CDF4620E3CB330095827C /* ENSetAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENSetAddressViewController.m; sourceTree = "<group>"; };
+		182CDF4720E3CB330095827C /* ENSetAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ENSetAddressViewController.xib; sourceTree = "<group>"; };
+		182CDF4A20E3CB520095827C /* ENSetNickViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENSetNickViewController.h; sourceTree = "<group>"; };
+		182CDF4B20E3CB520095827C /* ENSetNickViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENSetNickViewController.m; sourceTree = "<group>"; };
+		182CDF4C20E3CB520095827C /* ENSetNickViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ENSetNickViewController.xib; sourceTree = "<group>"; };
+		182CDF4F20E3CF960095827C /* ENBindPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENBindPhoneViewController.h; sourceTree = "<group>"; };
+		182CDF5020E3CF960095827C /* ENBindPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENBindPhoneViewController.m; sourceTree = "<group>"; };
+		182CDF5120E3CF960095827C /* ENBindPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ENBindPhoneViewController.xib; sourceTree = "<group>"; };
 		18355F2E20CB736700F5B22D /* EnterPriseIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnterPriseIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18355F3120CB736700F5B22D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18355F3220CB736700F5B22D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1016,6 +1036,18 @@
 				18A77C5620DF5C46006D3254 /* Subviews */,
 				18EE21C720CB82000030FD98 /* ENPersonViewController.h */,
 				18EE21C820CB82000030FD98 /* ENPersonViewController.m */,
+				182CDF4020E3CB190095827C /* ENEditPhoneViewController.h */,
+				182CDF4120E3CB190095827C /* ENEditPhoneViewController.m */,
+				182CDF4220E3CB190095827C /* ENEditPhoneViewController.xib */,
+				182CDF4F20E3CF960095827C /* ENBindPhoneViewController.h */,
+				182CDF5020E3CF960095827C /* ENBindPhoneViewController.m */,
+				182CDF5120E3CF960095827C /* ENBindPhoneViewController.xib */,
+				182CDF4520E3CB330095827C /* ENSetAddressViewController.h */,
+				182CDF4620E3CB330095827C /* ENSetAddressViewController.m */,
+				182CDF4720E3CB330095827C /* ENSetAddressViewController.xib */,
+				182CDF4A20E3CB520095827C /* ENSetNickViewController.h */,
+				182CDF4B20E3CB520095827C /* ENSetNickViewController.m */,
+				182CDF4C20E3CB520095827C /* ENSetNickViewController.xib */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -1539,16 +1571,20 @@
 				18355F3E20CB736700F5B22D /* LaunchScreen.storyboard in Resources */,
 				18355F3B20CB736700F5B22D /* Assets.xcassets in Resources */,
 				6A1CFAC620E08ACB007C68E5 /* LookMyEnterPriseView.xib in Resources */,
+				182CDF4920E3CB330095827C /* ENSetAddressViewController.xib in Resources */,
 				181E977720DA9C140016C06E /* NetworkErrorView.xib in Resources */,
 				1842909720E26C1E001A1CCF /* ENRegisterViewController.xib in Resources */,
 				1842909220E26BF7001A1CCF /* ENLoginViewController.xib in Resources */,
+				182CDF4E20E3CB520095827C /* ENSetNickViewController.xib in Resources */,
 				6A1F24D520DB992400163C99 /* Localizable.strings in Resources */,
+				182CDF5320E3CF960095827C /* ENBindPhoneViewController.xib in Resources */,
 				18A77C5420DF5C07006D3254 /* ApplyEnterpriseEnterView.xib in Resources */,
 				18EE218920CB7E690030FD98 /* MBProgressHUD.bundle in Resources */,
 				184290A120E26CA5001A1CCF /* ENEditInfomationViewController.xib in Resources */,
 				6A1F24DB20DB996A00163C99 /* ENAppLanguage.strings in Resources */,
 				6A4C128620DD02CB0032E079 /* NewsSmallImageCell.xib in Resources */,
 				6A4C127B20DCAB5F0032E079 /* BusinessListCell.xib in Resources */,
+				182CDF4420E3CB190095827C /* ENEditPhoneViewController.xib in Resources */,
 				1842909C20E26C51001A1CCF /* ENFindPwdViewController.xib in Resources */,
 				18355F3920CB736700F5B22D /* Main.storyboard in Resources */,
 				18A77C6520DF6B51006D3254 /* UserAccountInfoView.xib in Resources */,
@@ -1621,6 +1657,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182CDF4320E3CB190095827C /* ENEditPhoneViewController.m in Sources */,
 				6A1F25C020DBAAA700163C99 /* YYWebImageManager.m in Sources */,
 				6A1F25D220DBAAA700163C99 /* YYTextParser.m in Sources */,
 				6A1F259420DBAAA700163C99 /* NSBundle+YYAdd.m in Sources */,
@@ -1713,6 +1750,8 @@
 				6A1F25C320DBAAA700163C99 /* YYClassInfo.m in Sources */,
 				6A1F24E120DBA8C600163C99 /* YYFPSLabel.m in Sources */,
 				6A1F25AE20DBAAA700163C99 /* UITableView+YYAdd.m in Sources */,
+				182CDF4D20E3CB520095827C /* ENSetNickViewController.m in Sources */,
+				182CDF5220E3CF960095827C /* ENBindPhoneViewController.m in Sources */,
 				18EE21A220CB7E690030FD98 /* NSArray+StringValue.m in Sources */,
 				6A1F25A320DBAAA700163C99 /* UIApplication+YYAdd.m in Sources */,
 				18EE218020CB7E690030FD98 /* SVProgressHUD.m in Sources */,
@@ -1782,6 +1821,7 @@
 				18EE219820CB7E690030FD98 /* NSString+Pinyin.m in Sources */,
 				1842909B20E26C51001A1CCF /* ENFindPwdViewController.m in Sources */,
 				6A1CFADE20E0914F007C68E5 /* NavigationManager.m in Sources */,
+				182CDF4820E3CB330095827C /* ENSetAddressViewController.m in Sources */,
 				18EE21CF20CB82250030FD98 /* ENNewsMainViewController.m in Sources */,
 				18EE217F20CB7E690030FD98 /* SVProgressAnimatedView.m in Sources */,
 				6A1F25A720DBAAA700163C99 /* UIControl+YYAdd.m in Sources */,

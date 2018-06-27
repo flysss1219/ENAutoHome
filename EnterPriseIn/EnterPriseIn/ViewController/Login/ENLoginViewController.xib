@@ -23,12 +23,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6X-BV-1Pe">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6X-BV-1Pe">
                     <rect key="frame" x="17.5" y="17.5" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="9eb-2V-op6"/>
                         <constraint firstAttribute="width" constant="50" id="lzy-dh-wiA"/>
                     </constraints>
+                    <state key="normal" image="nav_icon_close"/>
                     <connections>
                         <action selector="closeLogin:" destination="-1" eventType="touchUpInside" id="wmq-wa-gtO"/>
                     </connections>
@@ -153,4 +154,7 @@
             <point key="canvasLocation" x="307.5" y="145.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="nav_icon_close" width="44" height="44"/>
+    </resources>
 </document>
