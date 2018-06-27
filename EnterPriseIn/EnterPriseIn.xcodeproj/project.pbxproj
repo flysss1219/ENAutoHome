@@ -18,6 +18,14 @@
 		18355F4120CB736700F5B22D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18355F4020CB736700F5B22D /* main.m */; };
 		18355F4B20CB736700F5B22D /* EnterPriseInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18355F4A20CB736700F5B22D /* EnterPriseInTests.m */; };
 		18355F5620CB736700F5B22D /* EnterPriseInUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18355F5520CB736700F5B22D /* EnterPriseInUITests.m */; };
+		1842909120E26BF7001A1CCF /* ENLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842908F20E26BF7001A1CCF /* ENLoginViewController.m */; };
+		1842909220E26BF7001A1CCF /* ENLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1842909020E26BF7001A1CCF /* ENLoginViewController.xib */; };
+		1842909620E26C1E001A1CCF /* ENRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842909420E26C1E001A1CCF /* ENRegisterViewController.m */; };
+		1842909720E26C1E001A1CCF /* ENRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1842909520E26C1E001A1CCF /* ENRegisterViewController.xib */; };
+		1842909B20E26C51001A1CCF /* ENFindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842909920E26C51001A1CCF /* ENFindPwdViewController.m */; };
+		1842909C20E26C51001A1CCF /* ENFindPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1842909A20E26C51001A1CCF /* ENFindPwdViewController.xib */; };
+		184290A020E26CA5001A1CCF /* ENEditInfomationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842909E20E26CA5001A1CCF /* ENEditInfomationViewController.m */; };
+		184290A120E26CA5001A1CCF /* ENEditInfomationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1842909F20E26CA5001A1CCF /* ENEditInfomationViewController.xib */; };
 		18A77C5420DF5C07006D3254 /* ApplyEnterpriseEnterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A77C5220DF5C07006D3254 /* ApplyEnterpriseEnterView.xib */; };
 		18A77C5520DF5C07006D3254 /* ApplyEnterpriseEnterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A77C5320DF5C07006D3254 /* ApplyEnterpriseEnterView.m */; };
 		18A77C5920DF5C69006D3254 /* ENShareAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A77C5820DF5C69006D3254 /* ENShareAppView.m */; };
@@ -230,6 +238,18 @@
 		18355F5120CB736700F5B22D /* EnterPriseInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnterPriseInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18355F5520CB736700F5B22D /* EnterPriseInUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterPriseInUITests.m; sourceTree = "<group>"; };
 		18355F5720CB736700F5B22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1842908E20E26BF7001A1CCF /* ENLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENLoginViewController.h; sourceTree = "<group>"; };
+		1842908F20E26BF7001A1CCF /* ENLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENLoginViewController.m; sourceTree = "<group>"; };
+		1842909020E26BF7001A1CCF /* ENLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ENLoginViewController.xib; sourceTree = "<group>"; };
+		1842909320E26C1E001A1CCF /* ENRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENRegisterViewController.h; sourceTree = "<group>"; };
+		1842909420E26C1E001A1CCF /* ENRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENRegisterViewController.m; sourceTree = "<group>"; };
+		1842909520E26C1E001A1CCF /* ENRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ENRegisterViewController.xib; sourceTree = "<group>"; };
+		1842909820E26C51001A1CCF /* ENFindPwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENFindPwdViewController.h; sourceTree = "<group>"; };
+		1842909920E26C51001A1CCF /* ENFindPwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENFindPwdViewController.m; sourceTree = "<group>"; };
+		1842909A20E26C51001A1CCF /* ENFindPwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ENFindPwdViewController.xib; sourceTree = "<group>"; };
+		1842909D20E26CA5001A1CCF /* ENEditInfomationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENEditInfomationViewController.h; sourceTree = "<group>"; };
+		1842909E20E26CA5001A1CCF /* ENEditInfomationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENEditInfomationViewController.m; sourceTree = "<group>"; };
+		1842909F20E26CA5001A1CCF /* ENEditInfomationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ENEditInfomationViewController.xib; sourceTree = "<group>"; };
 		18A77C5120DF5C07006D3254 /* ApplyEnterpriseEnterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyEnterpriseEnterView.h; sourceTree = "<group>"; };
 		18A77C5220DF5C07006D3254 /* ApplyEnterpriseEnterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyEnterpriseEnterView.xib; sourceTree = "<group>"; };
 		18A77C5320DF5C07006D3254 /* ApplyEnterpriseEnterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyEnterpriseEnterView.m; sourceTree = "<group>"; };
@@ -687,6 +707,25 @@
 			path = EnterPriseInUITests;
 			sourceTree = "<group>";
 		};
+		1842908D20E26BC7001A1CCF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1842908E20E26BF7001A1CCF /* ENLoginViewController.h */,
+				1842908F20E26BF7001A1CCF /* ENLoginViewController.m */,
+				1842909020E26BF7001A1CCF /* ENLoginViewController.xib */,
+				1842909320E26C1E001A1CCF /* ENRegisterViewController.h */,
+				1842909420E26C1E001A1CCF /* ENRegisterViewController.m */,
+				1842909520E26C1E001A1CCF /* ENRegisterViewController.xib */,
+				1842909820E26C51001A1CCF /* ENFindPwdViewController.h */,
+				1842909920E26C51001A1CCF /* ENFindPwdViewController.m */,
+				1842909A20E26C51001A1CCF /* ENFindPwdViewController.xib */,
+				1842909D20E26CA5001A1CCF /* ENEditInfomationViewController.h */,
+				1842909E20E26CA5001A1CCF /* ENEditInfomationViewController.m */,
+				1842909F20E26CA5001A1CCF /* ENEditInfomationViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		18A77C5020DF5BEE006D3254 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -943,6 +982,7 @@
 				18EE21C020CB816F0030FD98 /* NewsMain */,
 				18EE21BD20CB816F0030FD98 /* EnterPrise */,
 				18EE21BE20CB816F0030FD98 /* Person */,
+				1842908D20E26BC7001A1CCF /* Login */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1500,12 +1540,16 @@
 				18355F3B20CB736700F5B22D /* Assets.xcassets in Resources */,
 				6A1CFAC620E08ACB007C68E5 /* LookMyEnterPriseView.xib in Resources */,
 				181E977720DA9C140016C06E /* NetworkErrorView.xib in Resources */,
+				1842909720E26C1E001A1CCF /* ENRegisterViewController.xib in Resources */,
+				1842909220E26BF7001A1CCF /* ENLoginViewController.xib in Resources */,
 				6A1F24D520DB992400163C99 /* Localizable.strings in Resources */,
 				18A77C5420DF5C07006D3254 /* ApplyEnterpriseEnterView.xib in Resources */,
 				18EE218920CB7E690030FD98 /* MBProgressHUD.bundle in Resources */,
+				184290A120E26CA5001A1CCF /* ENEditInfomationViewController.xib in Resources */,
 				6A1F24DB20DB996A00163C99 /* ENAppLanguage.strings in Resources */,
 				6A4C128620DD02CB0032E079 /* NewsSmallImageCell.xib in Resources */,
 				6A4C127B20DCAB5F0032E079 /* BusinessListCell.xib in Resources */,
+				1842909C20E26C51001A1CCF /* ENFindPwdViewController.xib in Resources */,
 				18355F3920CB736700F5B22D /* Main.storyboard in Resources */,
 				18A77C6520DF6B51006D3254 /* UserAccountInfoView.xib in Resources */,
 				18EE218220CB7E690030FD98 /* SVProgressHUD.bundle in Resources */,
@@ -1582,6 +1626,7 @@
 				6A1F259420DBAAA700163C99 /* NSBundle+YYAdd.m in Sources */,
 				18EE21A820CB7E690030FD98 /* UIImage+PhotoCategory.m in Sources */,
 				6A1F25C420DBAAA700163C99 /* YYTextContainerView.m in Sources */,
+				1842909120E26BF7001A1CCF /* ENLoginViewController.m in Sources */,
 				18EE21C320CB81D80030FD98 /* ENEnterViewController.m in Sources */,
 				18EE218D20CB7E690030FD98 /* TADotView.m in Sources */,
 				6A1CFAEB20E0EFBB007C68E5 /* TSMarqueeView.m in Sources */,
@@ -1647,12 +1692,14 @@
 				6A4C127620DCAB420032E079 /* BusinessTableView.m in Sources */,
 				18EE219920CB7E690030FD98 /* UINavigationController+SafePushing.m in Sources */,
 				18EE217E20CB7E690030FD98 /* SVRadialGradientLayer.m in Sources */,
+				1842909620E26C1E001A1CCF /* ENRegisterViewController.m in Sources */,
 				6A1F25B520DBAAA700163C99 /* _YYWebImageSetter.m in Sources */,
 				18EE219220CB7E690030FD98 /* NSDate+Category.m in Sources */,
 				18EE218F20CB7E690030FD98 /* TAAnimatedDotView.m in Sources */,
 				6A1F25AB20DBAAA700163C99 /* UIImage+YYAdd.m in Sources */,
 				18EE21C920CB82000030FD98 /* ENPersonViewController.m in Sources */,
 				18EE218B20CB7E690030FD98 /* UIView+SDExtension.m in Sources */,
+				184290A020E26CA5001A1CCF /* ENEditInfomationViewController.m in Sources */,
 				6A1CFAC420E08AB2007C68E5 /* LookMyEnterPriseView.m in Sources */,
 				6A1F25B420DBAAA700163C99 /* YYMemoryCache.m in Sources */,
 				18EE218C20CB7E690030FD98 /* SDCollectionViewCell.m in Sources */,
@@ -1733,6 +1780,7 @@
 				6A1F25E620DBB12600163C99 /* BranchScrollView.m in Sources */,
 				18EE218620CB7E690030FD98 /* KeyChainSaveUUID.m in Sources */,
 				18EE219820CB7E690030FD98 /* NSString+Pinyin.m in Sources */,
+				1842909B20E26C51001A1CCF /* ENFindPwdViewController.m in Sources */,
 				6A1CFADE20E0914F007C68E5 /* NavigationManager.m in Sources */,
 				18EE21CF20CB82250030FD98 /* ENNewsMainViewController.m in Sources */,
 				18EE217F20CB7E690030FD98 /* SVProgressAnimatedView.m in Sources */,

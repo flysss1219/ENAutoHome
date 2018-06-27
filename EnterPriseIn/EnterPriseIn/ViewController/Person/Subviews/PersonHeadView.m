@@ -28,4 +28,14 @@
     
 }
 
+- (IBAction)clickHeadToLogin:(UIButton *)sender {
+    
+    if (_personDelegate && [_personDelegate respondsToSelector:@selector(personHeadViewDidLogin)]) {
+        [_personDelegate personHeadViewDidLogin];
+    }
+
+}
+
+
+
 @end

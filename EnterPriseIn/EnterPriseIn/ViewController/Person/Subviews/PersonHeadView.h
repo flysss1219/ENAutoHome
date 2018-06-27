@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class PersonHeadView;
+@protocol PersonHeadViewDelegate<NSObject>
+
+@optional
+- (void)personHeadViewDidLogin;
+
+@end
+
 @interface PersonHeadView : UIView
+
+@property (nonatomic, weak) id<PersonHeadViewDelegate> personDelegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 

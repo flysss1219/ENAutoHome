@@ -11,8 +11,9 @@
 #import "ENShareAppView.h"
 #import "UserAccountInfoView.h"
 #import "LookMyEnterPriseView.h"
+#import "ENLoginViewController.h"
 
-@interface ENPersonViewController ()<UIScrollViewDelegate,UserAccountInfoViewDelegate>
+@interface ENPersonViewController ()<UIScrollViewDelegate,UserAccountInfoViewDelegate,PersonHeadViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *mainScrollView;
 
@@ -105,6 +106,13 @@
     
 }
 
+#pragma mark -PersonHeadViewDelegate
+- (void)personHeadViewDidLogin{
+    
+    ENLoginViewController *vc = [[ENLoginViewController alloc]init];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
+}
+
 #pragma mark - getter
 - (UIScrollView *)mainScrollView {
     if (!_mainScrollView) {
@@ -120,6 +128,7 @@
 - (PersonHeadView*)personHeadView{
     if(!_personHeadView){
         _personHeadView = [[[NSBundle mainBundle]loadNibNamed:@"PersonHeadView" owner:self options:nil]lastObject];
+        _personHeadView.personDelegate = self;
     }
     return _personHeadView;
 }
