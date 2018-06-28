@@ -20,3 +20,9 @@
 "WechatSpace" = "微信朋友圈";
 "QQFriends" = "QQ好友";
 "WhatsApp" = "WhatsApp";
+
+"ResetAccount" = "重置手机号";
+"BindAccount" = "绑定手机号";
+"SetAddress" = "设置地址";
+"SetNickName" = "设置用户名";
+

@@ -121,7 +121,7 @@ const CGFloat kBannerHeight = 200;
     self.marqueeView.textDataArr = @[@"空港大城，司机璀璨，鸟居世界",@"恒大阳光半岛",@"合肥市徽州大道与芜湖路交口安徽大剧院"];
     [self.marqueeView startScrollBottomToTopWithNoSpace];
     
-    self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth,kBannerHeight+branchHeight+self.businessTableView.height+40);
+    self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth,kBannerHeight+branchHeight+self.businessTableView.height+90);
     
 }
 

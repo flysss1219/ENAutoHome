@@ -16,7 +16,7 @@
     
     _applyButton.layer.cornerRadius = 5.0f;
     _applyButton.layer.masksToBounds = YES;
-//    _applyButton.backgroundColor = ThemeColor;
+    _applyButton.backgroundColor = ThemeColor;
     _introduceField.layer.cornerRadius = 5.0f;
     _introduceField.layer.borderColor = [UIColor colorWithHex:0xe5e5e5].CGColor;
     _introduceField.layer.borderWidth = 0.5f;

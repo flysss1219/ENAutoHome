@@ -8,8 +8,9 @@
 
 #import "BranchListViewController.h"
 #import "BusinessTableView.h"
+#import "EnterpriseInfoViewController.h"
 
-@interface BranchListViewController ()
+@interface BranchListViewController ()<BusinessTableViewDelegate>
 
 @property (nonatomic, strong) BusinessTableView *businessTableView;
 
@@ -37,6 +38,8 @@
 }
 
 - (void)readyView{
+    self.title = @"分类";
+    [self setLeftButton];
     self.view.backgroundColor = [UIColor colorWithHex:0xf4f4f4];
     [self.view addSubview:self.businessTableView];
 }
@@ -46,9 +49,18 @@
     
 }
 
+#pragma mark - BusinessTableViewDelegate
+- (void)businessTableView:(BusinessTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    EnterpriseInfoViewController *vc = [[EnterpriseInfoViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (BusinessTableView*)businessTableView{
     if (!_businessTableView) {
-        _businessTableView = [[BusinessTableView alloc]initWithFrame:CGRectMake(0,0, KDeviceWidth,KDeviceHeight-64-59) style:UITableViewStylePlain];
+        _businessTableView = [[BusinessTableView alloc]initWithFrame:CGRectMake(0,0, KDeviceWidth,KDeviceHeight-64-49) style:UITableViewStylePlain];
+        _businessTableView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin| UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin |UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin;
+        _businessTableView.businessDelegate = self;
     }
     return _businessTableView;
 }

@@ -23,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"SetAddress", nil);
+    [self setLeftButton];
     // Do any additional setup after loading the view from its nib.
 }
 

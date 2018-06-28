@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class BusinessTableView;
+
+@protocol BusinessTableViewDelegate <NSObject>
+
+- (void)businessTableView:(BusinessTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
+
+@end
+
 
 @interface BusinessTableView : UITableView
 
+@property (nonatomic,weak) id<BusinessTableViewDelegate> businessDelegate;
 
 - (void)setBusinessInfo:(NSArray*)data haveSectionHeader:(BOOL)haveHeader;
 

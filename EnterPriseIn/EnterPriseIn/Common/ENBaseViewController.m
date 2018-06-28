@@ -161,7 +161,7 @@
 
 - (void)setLeftButton{
     _backBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0,44, 44)];
-    [_backBtn setImage:[UIImage imageNamed:@"nav_icon_back"] forState:UIControlStateNormal];
+    [_backBtn setImage:[UIImage imageNamed:@"nav_icon_back_white"] forState:UIControlStateNormal];
     _backBtn.adjustsImageWhenHighlighted = NO;
     [_backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
     if (IOS_VERSION >= 11) {

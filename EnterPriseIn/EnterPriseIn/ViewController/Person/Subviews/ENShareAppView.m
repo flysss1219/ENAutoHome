@@ -48,7 +48,7 @@
     CGFloat y = 40;
     CGFloat x = 17.5;
     CGFloat width = (KDeviceWidth-35-20*3)/4;
-    CGFloat height = width+20;
+    CGFloat height = width+5;
     for (int i = 0; i< 4; i++) {
         BranchIcon *icon = [[BranchIcon alloc]initWithFrame:CGRectMake(x+(width+20)*i,y, width, height) andImageStr:_imagesArr[i] title:_titlesArr[i]];
         icon.delegate = self;

@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7H-1s-aHN">
-                    <rect key="frame" x="26" y="80" width="340" height="45"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7H-1s-aHN">
+                    <rect key="frame" x="17.5" y="80" width="340" height="45"/>
                     <color key="backgroundColor" red="0.34509803919999998" green="0.4431372549" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="qPX-U1-Nie"/>
@@ -68,6 +68,8 @@
             </subviews>
             <color key="backgroundColor" red="0.93333333330000001" green="0.94117647059999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="g7H-1s-aHN" secondAttribute="trailing" constant="17.5" id="7XM-TL-dfF"/>
+                <constraint firstItem="g7H-1s-aHN" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="17.5" id="8St-8P-yGT"/>
                 <constraint firstItem="Etf-zM-ggZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="caW-dl-mqS"/>
                 <constraint firstItem="Etf-zM-ggZ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="peN-vK-br2"/>
                 <constraint firstAttribute="trailing" secondItem="Etf-zM-ggZ" secondAttribute="trailing" id="u38-yQ-nzU"/>

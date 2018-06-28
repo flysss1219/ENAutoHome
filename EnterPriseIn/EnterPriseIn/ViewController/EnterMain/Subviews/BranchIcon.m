@@ -81,6 +81,7 @@
 - (UIButton*)iconButton{
     if (!_iconButton) {
         _iconButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _iconButton.frame = self.bounds;
         _iconButton.backgroundColor = [UIColor clearColor];
         [_iconButton addTarget:self action:@selector(iconDidSelect) forControlEvents:UIControlEventTouchUpInside];
     }

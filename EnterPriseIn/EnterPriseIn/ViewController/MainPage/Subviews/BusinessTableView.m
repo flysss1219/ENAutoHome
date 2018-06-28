@@ -62,8 +62,9 @@
     
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
+    if (_businessDelegate && [_businessDelegate respondsToSelector:@selector(businessTableView:didSelectRowAtIndexPath:)]) {
+        [_businessDelegate businessTableView:self didSelectRowAtIndexPath:indexPath];
+    }
 }
 
 - (UIView*)headerView{

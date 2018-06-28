@@ -12,6 +12,9 @@
 #import "UserAccountInfoView.h"
 #import "LookMyEnterPriseView.h"
 #import "ENLoginViewController.h"
+#import "ENEditPhoneViewController.h"
+#import "ENSetNickViewController.h"
+#import "ENSetAddressViewController.h"
 
 @interface ENPersonViewController ()<UIScrollViewDelegate,UserAccountInfoViewDelegate,PersonHeadViewDelegate>
 
@@ -87,7 +90,7 @@
         make.top.equalTo(ws.enterpriseView.mas_bottom).with.offset(10);
         make.left.equalTo(ws.mainScrollView.mas_left);
         make.width.mas_equalTo(KDeviceWidth);
-        make.height.mas_equalTo(140);
+        make.height.mas_equalTo(130);
     }];
 }
 
@@ -99,11 +102,14 @@
 #pragma mark - UserAccountInfoViewDelegate
 - (void)userInfoViewEditUserAccount{
     
+    ENEditPhoneViewController *vc = [[ENEditPhoneViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)userInfoViewEditUserAddress{
     
-    
+    ENSetAddressViewController *vc = [[ENSetAddressViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark -PersonHeadViewDelegate

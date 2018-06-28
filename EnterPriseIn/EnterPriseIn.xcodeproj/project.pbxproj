@@ -34,6 +34,17 @@
 		1842909C20E26C51001A1CCF /* ENFindPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1842909A20E26C51001A1CCF /* ENFindPwdViewController.xib */; };
 		184290A020E26CA5001A1CCF /* ENEditInfomationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842909E20E26CA5001A1CCF /* ENEditInfomationViewController.m */; };
 		184290A120E26CA5001A1CCF /* ENEditInfomationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1842909F20E26CA5001A1CCF /* ENEditInfomationViewController.xib */; };
+		1887AF1B20E513D600E5BD03 /* EnterpriseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF1A20E513D600E5BD03 /* EnterpriseInfoViewController.m */; };
+		1887AF2020E513EC00E5BD03 /* ENPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF1C20E513EC00E5BD03 /* ENPictureCollectionViewCell.m */; };
+		1887AF2120E513EC00E5BD03 /* ENPictureCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF1E20E513EC00E5BD03 /* ENPictureCollectionView.m */; };
+		1887AF2420E51A4500E5BD03 /* EnterpriseInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF2320E51A4500E5BD03 /* EnterpriseInfoView.m */; };
+		1887AF2620E51A5900E5BD03 /* EnterpriseInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF2520E51A5900E5BD03 /* EnterpriseInfoView.xib */; };
+		1887AF2920E51A7300E5BD03 /* EnterpriseAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF2820E51A7300E5BD03 /* EnterpriseAddressView.m */; };
+		1887AF2B20E51A7B00E5BD03 /* EnterpriseAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF2A20E51A7B00E5BD03 /* EnterpriseAddressView.xib */; };
+		1887AF2E20E51AA400E5BD03 /* NoRegisterLookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF2D20E51AA400E5BD03 /* NoRegisterLookView.m */; };
+		1887AF3020E51AAE00E5BD03 /* NoRegisterLookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF2F20E51AAE00E5BD03 /* NoRegisterLookView.xib */; };
+		1887AF3320E51AC400E5BD03 /* ENFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887AF3220E51AC400E5BD03 /* ENFooterView.m */; };
+		1887AF3520E51AD500E5BD03 /* ENFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887AF3420E51AD500E5BD03 /* ENFooterView.xib */; };
 		18A77C5420DF5C07006D3254 /* ApplyEnterpriseEnterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A77C5220DF5C07006D3254 /* ApplyEnterpriseEnterView.xib */; };
 		18A77C5520DF5C07006D3254 /* ApplyEnterpriseEnterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A77C5320DF5C07006D3254 /* ApplyEnterpriseEnterView.m */; };
 		18A77C5920DF5C69006D3254 /* ENShareAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A77C5820DF5C69006D3254 /* ENShareAppView.m */; };
@@ -270,6 +281,24 @@
 		1842909D20E26CA5001A1CCF /* ENEditInfomationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENEditInfomationViewController.h; sourceTree = "<group>"; };
 		1842909E20E26CA5001A1CCF /* ENEditInfomationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENEditInfomationViewController.m; sourceTree = "<group>"; };
 		1842909F20E26CA5001A1CCF /* ENEditInfomationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ENEditInfomationViewController.xib; sourceTree = "<group>"; };
+		1887AF1920E513D600E5BD03 /* EnterpriseInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterpriseInfoViewController.h; sourceTree = "<group>"; };
+		1887AF1A20E513D600E5BD03 /* EnterpriseInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterpriseInfoViewController.m; sourceTree = "<group>"; };
+		1887AF1C20E513EC00E5BD03 /* ENPictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENPictureCollectionViewCell.m; sourceTree = "<group>"; };
+		1887AF1D20E513EC00E5BD03 /* ENPictureCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENPictureCollectionView.h; sourceTree = "<group>"; };
+		1887AF1E20E513EC00E5BD03 /* ENPictureCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENPictureCollectionView.m; sourceTree = "<group>"; };
+		1887AF1F20E513EC00E5BD03 /* ENPictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENPictureCollectionViewCell.h; sourceTree = "<group>"; };
+		1887AF2220E51A4500E5BD03 /* EnterpriseInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterpriseInfoView.h; sourceTree = "<group>"; };
+		1887AF2320E51A4500E5BD03 /* EnterpriseInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterpriseInfoView.m; sourceTree = "<group>"; };
+		1887AF2520E51A5900E5BD03 /* EnterpriseInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterpriseInfoView.xib; sourceTree = "<group>"; };
+		1887AF2720E51A7300E5BD03 /* EnterpriseAddressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterpriseAddressView.h; sourceTree = "<group>"; };
+		1887AF2820E51A7300E5BD03 /* EnterpriseAddressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterpriseAddressView.m; sourceTree = "<group>"; };
+		1887AF2A20E51A7B00E5BD03 /* EnterpriseAddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterpriseAddressView.xib; sourceTree = "<group>"; };
+		1887AF2C20E51AA400E5BD03 /* NoRegisterLookView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoRegisterLookView.h; sourceTree = "<group>"; };
+		1887AF2D20E51AA400E5BD03 /* NoRegisterLookView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoRegisterLookView.m; sourceTree = "<group>"; };
+		1887AF2F20E51AAE00E5BD03 /* NoRegisterLookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoRegisterLookView.xib; sourceTree = "<group>"; };
+		1887AF3120E51AC400E5BD03 /* ENFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ENFooterView.h; sourceTree = "<group>"; };
+		1887AF3220E51AC400E5BD03 /* ENFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ENFooterView.m; sourceTree = "<group>"; };
+		1887AF3420E51AD500E5BD03 /* ENFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ENFooterView.xib; sourceTree = "<group>"; };
 		18A77C5120DF5C07006D3254 /* ApplyEnterpriseEnterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyEnterpriseEnterView.h; sourceTree = "<group>"; };
 		18A77C5220DF5C07006D3254 /* ApplyEnterpriseEnterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyEnterpriseEnterView.xib; sourceTree = "<group>"; };
 		18A77C5320DF5C07006D3254 /* ApplyEnterpriseEnterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyEnterpriseEnterView.m; sourceTree = "<group>"; };
@@ -1016,6 +1045,8 @@
 				18EE21C220CB81D80030FD98 /* ENEnterViewController.m */,
 				6A1CFAE620E0E9E5007C68E5 /* BranchListViewController.h */,
 				6A1CFAE720E0E9E5007C68E5 /* BranchListViewController.m */,
+				1887AF1920E513D600E5BD03 /* EnterpriseInfoViewController.h */,
+				1887AF1A20E513D600E5BD03 /* EnterpriseInfoViewController.m */,
 			);
 			path = EnterMain;
 			sourceTree = "<group>";
@@ -1164,6 +1195,22 @@
 				6A1F25E520DBB12600163C99 /* BranchScrollView.m */,
 				6A1F24CE20DB93EC00163C99 /* BranchIcon.h */,
 				6A1F24CF20DB93EC00163C99 /* BranchIcon.m */,
+				1887AF1D20E513EC00E5BD03 /* ENPictureCollectionView.h */,
+				1887AF1E20E513EC00E5BD03 /* ENPictureCollectionView.m */,
+				1887AF1F20E513EC00E5BD03 /* ENPictureCollectionViewCell.h */,
+				1887AF1C20E513EC00E5BD03 /* ENPictureCollectionViewCell.m */,
+				1887AF2220E51A4500E5BD03 /* EnterpriseInfoView.h */,
+				1887AF2320E51A4500E5BD03 /* EnterpriseInfoView.m */,
+				1887AF2520E51A5900E5BD03 /* EnterpriseInfoView.xib */,
+				1887AF2720E51A7300E5BD03 /* EnterpriseAddressView.h */,
+				1887AF2820E51A7300E5BD03 /* EnterpriseAddressView.m */,
+				1887AF2A20E51A7B00E5BD03 /* EnterpriseAddressView.xib */,
+				1887AF2C20E51AA400E5BD03 /* NoRegisterLookView.h */,
+				1887AF2D20E51AA400E5BD03 /* NoRegisterLookView.m */,
+				1887AF2F20E51AAE00E5BD03 /* NoRegisterLookView.xib */,
+				1887AF3120E51AC400E5BD03 /* ENFooterView.h */,
+				1887AF3220E51AC400E5BD03 /* ENFooterView.m */,
+				1887AF3420E51AD500E5BD03 /* ENFooterView.xib */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -1568,10 +1615,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1887AF3020E51AAE00E5BD03 /* NoRegisterLookView.xib in Resources */,
 				18355F3E20CB736700F5B22D /* LaunchScreen.storyboard in Resources */,
 				18355F3B20CB736700F5B22D /* Assets.xcassets in Resources */,
 				6A1CFAC620E08ACB007C68E5 /* LookMyEnterPriseView.xib in Resources */,
 				182CDF4920E3CB330095827C /* ENSetAddressViewController.xib in Resources */,
+				1887AF2B20E51A7B00E5BD03 /* EnterpriseAddressView.xib in Resources */,
+				1887AF3520E51AD500E5BD03 /* ENFooterView.xib in Resources */,
 				181E977720DA9C140016C06E /* NetworkErrorView.xib in Resources */,
 				1842909720E26C1E001A1CCF /* ENRegisterViewController.xib in Resources */,
 				1842909220E26BF7001A1CCF /* ENLoginViewController.xib in Resources */,
@@ -1588,6 +1638,7 @@
 				1842909C20E26C51001A1CCF /* ENFindPwdViewController.xib in Resources */,
 				18355F3920CB736700F5B22D /* Main.storyboard in Resources */,
 				18A77C6520DF6B51006D3254 /* UserAccountInfoView.xib in Resources */,
+				1887AF2620E51A5900E5BD03 /* EnterpriseInfoView.xib in Resources */,
 				18EE218220CB7E690030FD98 /* SVProgressHUD.bundle in Resources */,
 				18A77C6020DF63CF006D3254 /* PersonHeadView.xib in Resources */,
 			);
@@ -1710,6 +1761,7 @@
 				18A77C5520DF5C07006D3254 /* ApplyEnterpriseEnterView.m in Sources */,
 				6A1F25DE20DBAAA700163C99 /* YYSentinel.m in Sources */,
 				6A1F25C620DBAAA700163C99 /* YYTextEffectWindow.m in Sources */,
+				1887AF1B20E513D600E5BD03 /* EnterpriseInfoViewController.m in Sources */,
 				18EE219620CB7E690030FD98 /* NSDictionary+Null.m in Sources */,
 				6A1F25D120DBAAA700163C99 /* YYTextAttribute.m in Sources */,
 				6A1F25C220DBAAA700163C99 /* NSObject+YYModel.m in Sources */,
@@ -1758,6 +1810,7 @@
 				18EE217920CB7E690030FD98 /* Reachability.m in Sources */,
 				6A1F25DC20DBAAA700163C99 /* YYKeychain.m in Sources */,
 				6A1F25CF20DBAAA700163C99 /* UIPasteboard+YYText.m in Sources */,
+				1887AF2120E513EC00E5BD03 /* ENPictureCollectionView.m in Sources */,
 				6A1F25B720DBAAA700163C99 /* MKAnnotationView+YYWebImage.m in Sources */,
 				6A1F25A620DBAAA700163C99 /* UIColor+YYAdd.m in Sources */,
 				6A1F25C520DBAAA700163C99 /* YYTextDebugOption.m in Sources */,
@@ -1781,12 +1834,14 @@
 				6A1F25BE20DBAAA700163C99 /* YYImageCoder.m in Sources */,
 				6A1F25BA20DBAAA700163C99 /* YYAnimatedImageView.m in Sources */,
 				6A1F25CB20DBAAA700163C99 /* YYTextMagnifier.m in Sources */,
+				1887AF3320E51AC400E5BD03 /* ENFooterView.m in Sources */,
 				6A1F25E220DBAAA700163C99 /* YYTransaction.m in Sources */,
 				18A77C5E20DF63BE006D3254 /* PersonHeadView.m in Sources */,
 				18EE21B120CB7EFC0030FD98 /* ENTabBarController.m in Sources */,
 				18EE219020CB7E690030FD98 /* TAAbstractDotView.m in Sources */,
 				18EE219120CB7E690030FD98 /* NSData+NSDataAdditions.m in Sources */,
 				18EE21AE20CB7E690030FD98 /* GlobalFactoryViews.m in Sources */,
+				1887AF2920E51A7300E5BD03 /* EnterpriseAddressView.m in Sources */,
 				18EE21A520CB7E690030FD98 /* UIButton+EnlargeTouchArea.m in Sources */,
 				18355F3320CB736700F5B22D /* AppDelegate.m in Sources */,
 				6A1F25C820DBAAA700163C99 /* YYTextKeyboardManager.m in Sources */,
@@ -1814,6 +1869,7 @@
 				6A1F25E320DBAAA700163C99 /* YYWeakProxy.m in Sources */,
 				6A1F25BC20DBAAA700163C99 /* YYImage.m in Sources */,
 				6A1F24CD20DB93C500163C99 /* CarBranchView.m in Sources */,
+				1887AF2420E51A4500E5BD03 /* EnterpriseInfoView.m in Sources */,
 				6A1F259820DBAAA700163C99 /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				6A1CFAE220E091CE007C68E5 /* CurrentUser.m in Sources */,
 				6A1F25E620DBB12600163C99 /* BranchScrollView.m in Sources */,
@@ -1821,6 +1877,8 @@
 				18EE219820CB7E690030FD98 /* NSString+Pinyin.m in Sources */,
 				1842909B20E26C51001A1CCF /* ENFindPwdViewController.m in Sources */,
 				6A1CFADE20E0914F007C68E5 /* NavigationManager.m in Sources */,
+				1887AF2020E513EC00E5BD03 /* ENPictureCollectionViewCell.m in Sources */,
+				1887AF2E20E51AA400E5BD03 /* NoRegisterLookView.m in Sources */,
 				182CDF4820E3CB330095827C /* ENSetAddressViewController.m in Sources */,
 				18EE21CF20CB82250030FD98 /* ENNewsMainViewController.m in Sources */,
 				18EE217F20CB7E690030FD98 /* SVProgressAnimatedView.m in Sources */,
