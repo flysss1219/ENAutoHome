@@ -1,14 +1,14 @@
 //
-//  EnterpriseInfoView.m
+//  ENEnterpriseInfoView.m
 //  EnterPriseIn
 //
-//  Created by 陶顺顺 on 2018/6/28.
+//  Created by 陶顺顺 on 2018/6/29.
 //  Copyright © 2018年 com.shun. All rights reserved.
 //
 
-#import "EnterpriseInfoView.h"
+#import "ENEnterpriseInfoView.h"
 
-@implementation EnterpriseInfoView
+@implementation ENEnterpriseInfoView
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -18,9 +18,8 @@
 }
 */
 
-- (IBAction)LookUpEnterpriseWeb:(UIButton *)sender {
-    
-    
+
+- (IBAction)lookEnterpriseWeb:(UIButton *)sender {
 }
 
 

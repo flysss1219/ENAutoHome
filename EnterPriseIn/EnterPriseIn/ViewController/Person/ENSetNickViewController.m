@@ -10,16 +10,35 @@
 
 @interface ENSetNickViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+
+
 @end
 
 @implementation ENSetNickViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"SetNickName", nil);
+    
+    self.title = LocalizableHelperGetStringWithKeyFromTable(@"SetNickName", nil);
     [self setLeftButton];
-    // Do any additional setup after loading the view from its nib.
+    self.view.backgroundColor = ThemebgViewColor;
+    
 }
+
+
+
+
+- (IBAction)commitUserInfo:(UIButton *)sender {
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

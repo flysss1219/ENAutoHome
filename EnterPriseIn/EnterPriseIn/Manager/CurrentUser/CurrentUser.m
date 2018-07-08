@@ -38,6 +38,7 @@
         self.user_address       = @"";
         self.user_head          = @"";
         self.user_email         = @"";
+        self.current_language   = ENAppChineseType;
     }
     return self;
 }
@@ -113,6 +114,7 @@
     [aCoder encodeObject:self.user_pw forKey:@"user_pw"];
     [aCoder encodeObject:self.user_name forKey:@"user_name"];
     [aCoder encodeObject:self.user_phone forKey:@"user_phone"];
+    [aCoder encodeInteger:self.current_language forKey:@"current_language"];
     
 }
 
@@ -125,6 +127,7 @@
     self.user_pw = [aDecoder decodeObjectForKey:@"user_pw"];
     self.user_name = [aDecoder decodeObjectForKey:@"user_name"];
     self.user_phone = [aDecoder decodeObjectForKey:@"user_phone"];
+    self.current_language = [aDecoder decodeIntegerForKey:@"current_language"];
     
     return self;
 }

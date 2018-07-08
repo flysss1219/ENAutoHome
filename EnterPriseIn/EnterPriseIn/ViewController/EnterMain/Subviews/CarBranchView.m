@@ -8,7 +8,7 @@
 
 #import "CarBranchView.h"
 #import "BranchIcon.h"
-
+#import "ENBranchModel.h"
 
 const CGFloat kBranchGap = 15.0f;
 
@@ -36,14 +36,17 @@ const CGFloat kBranchGap = 15.0f;
 }
 
 
-- (CGFloat)setCarBranchForData:(NSArray*)data andBranchTitle:(NSString*)title andInitTag:(NSInteger)tag{
+- (CGFloat)setCarBranchForData:(ENBranchModel*)branchModel andBranchTitle:(NSString*)title andInitTag:(NSInteger)tag{
     
     self.titleLabel.text = title;
     CGFloat iconWidth = (_kBranchWidth - kBranchGap*4)/3;
     _kBranchHeight = iconWidth+30.0f;
+    
+    NSArray *branchList = branchModel.subModel;
     CGFloat y = 40.0f;
-    for (int i = 0; i<data.count ; i++ ) {
-        BranchIcon *icon = [[BranchIcon alloc]initWithFrame:CGRectMake(0, 0, iconWidth, _kBranchHeight) andImage:nil andTitle:data[i]];
+    for (int i = 0; i<branchList.count ; i++ ) {
+        ENBranchModel *fourthModel = [branchList objectAtIndex:i];
+        BranchIcon *icon = [[BranchIcon alloc]initWithFrame:CGRectMake(0, 0, iconWidth, _kBranchHeight) andImage:nil andTitle:fourthModel.branch_title];
         icon.delegate = self;
         icon.tag = tag+i;
         [self addSubview:icon];
@@ -57,7 +60,7 @@ const CGFloat kBranchGap = 15.0f;
 //    line.backgroundColor = [UIColor colorWithHex:0xe5e5e5];
 //    [self addSubview:line];
     
-    return y+_kBranchHeight*((data.count+2)/3);
+    return y+_kBranchHeight*((branchList.count+2)/3);
 }
 
 #pragma mark -BranchIconSelectDelegate
@@ -65,12 +68,11 @@ const CGFloat kBranchGap = 15.0f;
     if (_menuDelegate && [_menuDelegate respondsToSelector:@selector(carBranchViewDidSelect:andMenuId:)]) {
         [_menuDelegate carBranchViewDidSelect:index andMenuId:menuId];
     }
-    
 }
 
 - (UILabel*)titleLabel{
     if (!_titleLabel) {
-        _titleLabel = [GlobalFactoryViews createLabelWithFrame:CGRectMake(30,10,120, 15) text:NSLocalizedString(@"TabBarHomeBranch", nil) labelFont:[UIFont systemFontOfSize:13] textColor:ViceTitleColor textAligenment:0];
+        _titleLabel = [GlobalFactoryViews createLabelWithFrame:CGRectMake(30,10,120, 15) text:LocalizableHelperGetStringWithKeyFromTable(@"TabBarHomeBranch", nil) labelFont:[UIFont systemFontOfSize:13] textColor:ViceTitleColor textAligenment:0];
     }
     return _titleLabel;
 }

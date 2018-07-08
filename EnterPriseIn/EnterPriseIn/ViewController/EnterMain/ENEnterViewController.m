@@ -11,24 +11,35 @@
 #import "YYFPSLabel.h"
 #import "BranchScrollView.h"
 #import "BranchListViewController.h"
+#import "ENFoldTableView.h"
+#import "ENFoldHeaderModel.h"
+#import "ENBranchModel.h"
+#import "ENHttp.h"
 
-@interface ENEnterViewController ()<UIScrollViewDelegate,BranchScrollViewDelegate,CarBranchViewDelegate>
+@interface ENEnterViewController ()<UIScrollViewDelegate,BranchScrollViewDelegate,CarBranchViewDelegate,ENFoldTableViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *mainScrollView;
-@property (nonatomic, strong) BranchScrollView *branchView;
+//@property (nonatomic, strong) BranchScrollView *branchView;
+@property (nonatomic, strong) ENFoldTableView *branchTableView;
 @property (nonatomic, strong) UIImageView *headImageView;
 @property (nonatomic, strong) YYFPSLabel *fpsLabel;
+
+//左边主菜单
+@property (nonatomic, strong) NSArray *mainMenuList;
+//右边分类列表
+@property (nonatomic, strong) NSMutableArray *subMenuList;
 
 @end
 
 @implementation ENEnterViewController
-{
-    NSMutableArray *_offsetArr;//记录每个分类模块的最大高度值
-}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self readyView];
-    [self initData];
+//    [self initData];
+    
+    [self requestData];
     
 }
 
@@ -36,7 +47,7 @@
     self.view.backgroundColor = [UIColor colorWithHex:0xf8f8f8];
     [self.view addSubview:self.mainScrollView];
     [self.mainScrollView addSubview:self.headImageView];
-    [self.view addSubview:self.branchView];
+    [self.view addSubview:self.branchTableView];
     
     _fpsLabel = [YYFPSLabel new];
     [_fpsLabel sizeToFit];
@@ -46,30 +57,127 @@
     [self.view addSubview:_fpsLabel];
 }
 
-- (void)initData{
+- (void)requestData{
     
-    
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:@"http://img.berui8.com/hefei/brzy/2018/05/20180511/3991W1526033145.png"]];
-    
-    _offsetArr = [NSMutableArray arrayWithCapacity:5];
-    
-    CGFloat y = 150.f;
-    for (int i = 0; i<5; i++) {
-
-        CarBranchView *branchView = [[CarBranchView alloc]initWithFrame:CGRectMake(0,0, KDeviceWidth-100, KDeviceHeight)];
-        branchView.menuDelegate = self;
-        CGFloat height = [branchView setCarBranchForData:@[@"奥迪",@"宝马",@"奔驰",@"阿斯顿马丁",@"劳斯莱斯",@"别克",@"雪佛兰",@"丰田",@"东风小康"] andBranchTitle:NSLocalizedString(@"AppName", nil) andInitTag:100];
-        branchView.frame = CGRectMake(0, y,KDeviceWidth-100, height);
-        [self.mainScrollView addSubview:branchView];
-        
-        [_offsetArr addObject:@(y)];
-        y += height;
-    }
-    
-    self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth-100, y);
-    [self.branchView setBranchScrollViewForData:@[@"东风小康",@"劳斯莱斯",@"东风小康",@"劳斯莱斯",@"奔驰"]];
+    [ENHttp getEnterpriseBranchListCompleteBlock:^(BOOL ok, NSString *message, NSArray *branchList) {
+       
+        if (ok) {
+//            一二级分类数据
+            self.mainMenuList = branchList;
+            [self.branchTableView setFoldTableViewHeaderData:branchList];
+            
+//          取头图规则 默认取一级分类下第一条数据头图
+//          选择了二级分类，就去二级分类的图，如果二级分类没有图则去一级分类取
+            ENFoldHeaderModel *model = [branchList firstObject];
+            [self.headImageView sd_setImageWithURL:[NSURL URLWithString:model.adUrl]];
+            
+//            三四级分类数据
+            [self getAllBranchMenuData:branchList];
+            
+        }
+    }];
     
 }
+
+
+//初始状态加载所有3，4级分类数据
+- (void)getAllBranchMenuData:(NSArray*)list{
+    
+//    获取所有2级分类的子集
+    [self.subMenuList removeAllObjects];
+    NSMutableArray *allData = [NSMutableArray arrayWithCapacity:0];
+    for (ENFoldHeaderModel *model in list) {
+        NSArray *subArr = model.subModel;
+        if (subArr.count<=0) {
+            continue;
+        }
+        for (ENFoldHeaderModel *sub in subArr) {
+            if (sub.sonList.count<= 0) {
+                continue;
+            }
+            for (NSDictionary *obj in sub.sonList) {
+                NSArray *children = obj[@"children"];
+                if (children.count<=0) {
+                    continue;
+                }
+                [allData addObject:obj];
+            }
+        }
+    }
+    
+    for (NSDictionary *dict in allData ) {
+        ENBranchModel *model = [ENBranchModel setThirdLevelData:dict];
+        [self.subMenuList addObject:model];
+    }
+    [self layoutBranchListView];
+}
+
+
+- (void)layoutBranchListView{
+    
+    for (UIView *view in self.mainScrollView.subviews) {
+        if ([view isEqual:self.headImageView]) {
+            continue;
+        }
+        [view removeFromSuperview];
+    }
+    
+    CGFloat y = 150.f;
+    for (int i = 0; i<self.subMenuList.count; i++) {
+        
+        ENBranchModel *model = [self.subMenuList objectAtIndex:i];
+        if (!model) {
+            continue;
+        }
+        
+        CarBranchView *branchView = [[CarBranchView alloc]initWithFrame:CGRectMake(0,0, KDeviceWidth-100, KDeviceHeight)];
+        branchView.menuDelegate = self;
+        CGFloat height = [branchView setCarBranchForData:model andBranchTitle:model.branch_title andInitTag:100];
+        branchView.frame = CGRectMake(0, y,KDeviceWidth-100, height);
+        [self.mainScrollView addSubview:branchView];
+        y += height;
+    }
+    self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth-100, y);
+}
+- (void)refreshBranchViewData:(ENFoldHeaderModel*)model{
+    
+    [self.subMenuList removeAllObjects];
+    
+    NSArray *array = model.sonList;
+    NSMutableArray *allData = [NSMutableArray arrayWithCapacity:0];
+    
+    for (NSDictionary *obj in array) {
+        NSArray *children = obj[@"children"];
+        if (children.count<=0) {
+            continue;
+        }
+        [allData addObject:obj];
+    }
+    
+    for (NSDictionary *dict in allData ) {
+        ENBranchModel *model = [ENBranchModel setThirdLevelData:dict];
+        [self.subMenuList addObject:model];
+    }
+    
+    [self layoutBranchListView];
+    
+}
+
+#pragma mark - ENFoldTableViewDelegate
+- (void)ENFoldTableViewDidSelect:(NSIndexPath *)indexpath{
+    
+    NSLog(@"section = %ld;row = %ld",indexpath.section,indexpath.row);
+    ENFoldHeaderModel *model = self.mainMenuList[indexpath.section];
+    ENFoldHeaderModel *subModel = model.subModel[indexpath.row];
+    [self refreshBranchViewData:subModel];
+    
+}
+
+- (void)ENFoldTableViewDidSelectHeaderView:(NSInteger)indexpath{
+    
+    [self getAllBranchMenuData:self.mainMenuList];
+}
+
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     if (_fpsLabel.alpha == 0) {
@@ -131,17 +239,18 @@
 - (void)carBranchViewDidSelect:(NSInteger)index andMenuId:(NSString*)menuId{
     
     BranchListViewController *vc = [[BranchListViewController alloc]init];
+    
     [self.navigationController pushViewController:vc animated:YES];
     
 }
 
 
-#pragma mark - BranchScrollViewDelegate
-- (void)branchViewDidSelectInside:(NSInteger)index{
-    
-    CGFloat contentOffset = [_offsetArr[index] floatValue];
-    [self.mainScrollView setContentOffset:CGPointMake(0, contentOffset) animated:YES];
-}
+//#pragma mark - BranchScrollViewDelegate
+//- (void)branchViewDidSelectInside:(NSInteger)index{
+//
+//    CGFloat contentOffset = [_offsetArr[index] floatValue];
+//    [self.mainScrollView setContentOffset:CGPointMake(0, contentOffset) animated:YES];
+//}
 
 #pragma mark -
 - (UIScrollView *)mainScrollView {
@@ -162,15 +271,32 @@
     return _headImageView;
 }
 
-- (BranchScrollView*)branchView{
-    if (!_branchView) {
-        _branchView = [[BranchScrollView alloc]initWithFrame:CGRectMake(0,0,100, KDeviceHeight-49-64)];
-        _branchView.showsVerticalScrollIndicator = NO;
-        _branchView.showsHorizontalScrollIndicator = NO;
-        _branchView.delegate = self;
-        _branchView.branchDelegate = self;
+- (ENFoldTableView*)branchTableView{
+    if (!_branchTableView) {
+        _branchTableView = [[ENFoldTableView alloc]initWithFrame:CGRectMake(0, 0, 100, KDeviceHeight-64-49) style:UITableViewStyleGrouped];
+        _branchTableView.foldDelegate = self;
     }
-    return _branchView;
+    return _branchTableView;
+}
+
+
+
+//- (BranchScrollView*)branchView{
+//    if (!_branchView) {
+//        _branchView = [[BranchScrollView alloc]initWithFrame:CGRectMake(0,0,100, KDeviceHeight-49-64)];
+//        _branchView.showsVerticalScrollIndicator = NO;
+//        _branchView.showsHorizontalScrollIndicator = NO;
+//        _branchView.delegate = self;
+//        _branchView.branchDelegate = self;
+//    }
+//    return _branchView;
+//}
+
+- (NSMutableArray*)subMenuList{
+    if (!_subMenuList) {
+        _subMenuList = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _subMenuList;
 }
 
 

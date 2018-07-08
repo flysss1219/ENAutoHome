@@ -8,6 +8,7 @@
 
 #import "BusinessTableView.h"
 #import "BusinessListCell.h"
+#import "EnterpriseInfoModel.h"
 
 @interface BusinessTableView()<UITableViewDelegate,UITableViewDataSource>
 
@@ -49,7 +50,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;//self.data.count;
+    return self.data.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -57,7 +58,8 @@
     if (cell == nil) {
          cell = [[BusinessListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"BusinessListCell"];
     }
-    [cell setDataForCell:nil];
+    EnterpriseInfoModel *model = [self.data objectAtIndex:indexPath.row];
+    [cell setDataForCell:model];
     return cell;
     
 }
@@ -77,7 +79,8 @@
 
 - (UILabel*)titleLabel{
     if (!_titleLabel) {
-        _titleLabel = [GlobalFactoryViews createLabelWithFrame:CGRectMake(30,15,120, 15) text:NSLocalizedString(@"HomePageTableHeader", nil) labelFont:[UIFont systemFontOfSize:13] textColor:ViceTitleColor textAligenment:0];
+
+        _titleLabel = [GlobalFactoryViews createLabelWithFrame:CGRectMake(30,15,120, 15) text:LocalizableHelperGetStringWithKeyFromTable(@"HomePageTableHeader", nil) labelFont:[UIFont systemFontOfSize:13] textColor:ViceTitleColor textAligenment:0];
     }
     return _titleLabel;
 }

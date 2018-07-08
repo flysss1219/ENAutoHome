@@ -10,11 +10,10 @@
 #import "PersonHeadView.h"
 #import "ENShareAppView.h"
 #import "UserAccountInfoView.h"
-#import "LookMyEnterPriseView.h"
+#import "UserNickNameView.h"
 #import "ENLoginViewController.h"
 #import "ENEditPhoneViewController.h"
 #import "ENSetNickViewController.h"
-#import "ENSetAddressViewController.h"
 
 @interface ENPersonViewController ()<UIScrollViewDelegate,UserAccountInfoViewDelegate,PersonHeadViewDelegate>
 
@@ -24,7 +23,7 @@
 
 @property (nonatomic, strong) UserAccountInfoView *infoView;
 
-@property (nonatomic, strong) LookMyEnterPriseView *enterpriseView;
+@property (nonatomic, strong) UserNickNameView *nickNameView;
 
 @property (nonatomic, strong) ENShareAppView *shareView;
 
@@ -56,8 +55,8 @@
     [self.view addSubview:self.mainScrollView];
     self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth, KDeviceHeight);
     [self.mainScrollView addSubview:self.personHeadView];
+    [self.mainScrollView addSubview:self.nickNameView];
     [self.mainScrollView addSubview:self.infoView];
-    [self.mainScrollView addSubview:self.enterpriseView];
     [self.mainScrollView addSubview:self.shareView];
     
     
@@ -74,20 +73,21 @@
         make.width.mas_equalTo(KDeviceWidth);
         make.height.mas_equalTo(130);
     }];
-    [self.infoView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(ws.personHeadView.mas_bottom).with.offset(10);
-        make.left.equalTo(ws.mainScrollView.mas_left);
-        make.width.mas_equalTo(KDeviceWidth);
-        make.height.mas_equalTo(120);
-    }];
-    [self.enterpriseView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(ws.infoView.mas_bottom);
+    
+    [self.nickNameView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(ws.personHeadView.mas_bottom);
         make.left.equalTo(ws.mainScrollView.mas_left);
         make.width.mas_equalTo(KDeviceWidth);
         make.height.mas_equalTo(60);
     }];
+    [self.infoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(ws.nickNameView.mas_bottom);
+        make.left.equalTo(ws.mainScrollView.mas_left);
+        make.width.mas_equalTo(KDeviceWidth);
+        make.height.mas_equalTo(120);
+    }];
     [self.shareView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(ws.enterpriseView.mas_bottom).with.offset(10);
+        make.top.equalTo(ws.infoView.mas_bottom).with.offset(10);
         make.left.equalTo(ws.mainScrollView.mas_left);
         make.width.mas_equalTo(KDeviceWidth);
         make.height.mas_equalTo(130);
@@ -108,15 +108,13 @@
 
 - (void)userInfoViewEditUserAddress{
     
-    ENSetAddressViewController *vc = [[ENSetAddressViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark -PersonHeadViewDelegate
 - (void)personHeadViewDidLogin{
     
     ENLoginViewController *vc = [[ENLoginViewController alloc]init];
-    [self.navigationController presentViewController:vc animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - getter
@@ -146,12 +144,12 @@
     return _infoView;
 }
 
-- (LookMyEnterPriseView*)enterpriseView{
-    if (!_enterpriseView) {
-        _enterpriseView = [[[NSBundle mainBundle]loadNibNamed:@"LookMyEnterPriseView" owner:self options:nil]lastObject];
+- (UserNickNameView*)nickNameView{
+    if (!_nickNameView) {
+        _nickNameView = [[[NSBundle mainBundle]loadNibNamed:@"UserNickNameView" owner:self options:nil]lastObject];
         
     }
-    return _enterpriseView;
+    return _nickNameView;
 }
 
 - (ENShareAppView*)shareView{

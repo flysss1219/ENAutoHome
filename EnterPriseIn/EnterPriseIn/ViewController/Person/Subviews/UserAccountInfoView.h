@@ -27,10 +27,12 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *userAccount;
 
+@property (weak, nonatomic) IBOutlet UILabel *addressTitle;
 
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *accountReplay;
+
 @property (weak, nonatomic) IBOutlet UILabel *addressReplay;
 
 - (void)updateUserInfo;

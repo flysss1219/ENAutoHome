@@ -6,11 +6,69 @@
   Copyright © 2018年 com.shun. All rights reserved.
 */
 
-
+//tabbar
 "AppName" = "汽摩配之窗";
 "TabBarHomePageName" = "首页";
 "TabBarHomeBranch" = "分类";
 "TabBarHomeNews" = "资讯";
 "TabBarHomeEnter" = "入驻";
 "TabBarHomePerson" = "我的";
+"HomePageTableHeader" = "合作商家";
 "ShareApp" = "分享汽摩配之窗";
+
+
+"WechatFriends" = "微信好友";
+"WechatSpace" = "微信朋友圈";
+"QQFriends" = "QQ好友";
+"WhatsApp" = "WhatsApp";
+
+
+"ResetAccount" = "重置手机号";
+"BindAccount" = "绑定手机号";
+"SetAddress" = "设置地址";
+"SetNickName" = "设置用户名";
+
+"Login" = "登录";
+"AccountNamePhone" = "手机号";
+"Password" = "密码";
+"Register" = "注册";
+"ForgetPwd" = "忘记密码";
+"PleaseInput" = "请输入";
+"VertifyCode" = "验证码";
+"InputPhoneNum" = "请输入手机号";
+"PleaseFillin" = "请填写";
+"PleaseFillinPWD" = "请填写密码";
+"DemandParts" = "需求配件";
+"Back" = "返回";
+"SendVertifyCode" = "发送验证码";
+"Email" = "邮箱";
+"InputEmail" = "请输入邮箱";
+"FindPassword" = "找回邮箱";
+"Confirm" = "确认";
+
+"ConfirmPassword" = "确认密码";
+"DemandTrips" = "需求配件";
+"PleaseConfirmPassword" = "请确认密码";
+
+"UserName" = "用户名";
+"NickName" = "昵称";
+"Address" = "地址";
+"Reset" = "重置";
+
+
+"EnterpriseName" = "企业名称";
+"EnterpriseAddress" = "企业地址";
+"EnterpriseIntroduce" = "企业简介";
+"ConnectInfo" = "联系人信息";
+"FirstName" = "姓名";
+"TEL" = "电话";
+"ApplyEnter" = "申请入住";
+"DetailAddress" = "详细地址";
+"MaxWordCount" = "请填写，最多不超过500字";
+
+
+"LanguageChangeSuccess" = "语言切换成功，现在是中文";
+"SkipAd" = "跳过";
+"SearchKey" = "搜索";
+
+

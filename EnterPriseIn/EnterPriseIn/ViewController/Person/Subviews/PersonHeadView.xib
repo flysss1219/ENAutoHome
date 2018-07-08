@@ -15,6 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="L5t-92-9fc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mr-jW-ajP">
                     <rect key="frame" x="59" y="64" width="55.5" height="20"/>
                     <constraints>
@@ -88,24 +91,35 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.2901960784" green="0.44705882349999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="g67-po-Chq" firstAttribute="top" secondItem="5Mr-jW-ajP" secondAttribute="bottom" constant="10" id="2Vf-kJ-uDA"/>
+                <constraint firstItem="L5t-92-9fc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6H9-Ge-xW8"/>
                 <constraint firstItem="z2E-PL-AeS" firstAttribute="top" secondItem="5Mr-jW-ajP" secondAttribute="bottom" constant="10" id="6Mu-PL-8NR"/>
                 <constraint firstItem="zal-9z-cte" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="GKK-lX-uW9"/>
                 <constraint firstAttribute="bottom" secondItem="S2a-cV-nig" secondAttribute="bottom" id="H4W-J5-9rO"/>
                 <constraint firstItem="zal-9z-cte" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="68" id="MWG-dL-kHr"/>
                 <constraint firstItem="XZA-IR-KJM" firstAttribute="leading" secondItem="5Mr-jW-ajP" secondAttribute="trailing" id="QAq-l2-3th"/>
                 <constraint firstItem="S2a-cV-nig" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qyy-Tn-RBp"/>
+                <constraint firstItem="L5t-92-9fc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Tfv-1n-Izu"/>
+                <constraint firstAttribute="trailing" secondItem="L5t-92-9fc" secondAttribute="trailing" id="Y8m-Gv-wje"/>
                 <constraint firstItem="g67-po-Chq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="dPT-UF-eSv"/>
                 <constraint firstAttribute="trailing" secondItem="S2a-cV-nig" secondAttribute="trailing" id="gPr-Zb-Aie"/>
                 <constraint firstItem="S2a-cV-nig" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="h8q-iw-X53"/>
                 <constraint firstItem="5Mr-jW-ajP" firstAttribute="leading" secondItem="zal-9z-cte" secondAttribute="trailing" constant="5" id="mwu-8F-rac"/>
+                <constraint firstAttribute="bottom" secondItem="L5t-92-9fc" secondAttribute="bottom" id="qAa-pk-zRW"/>
                 <constraint firstItem="5Mr-jW-ajP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="xuj-pt-Bjt"/>
                 <constraint firstItem="XZA-IR-KJM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="68" id="z7e-Tk-Kcz"/>
                 <constraint firstItem="z2E-PL-AeS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="zwg-tt-4SX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="z2E-PL-AeS"/>
+                    <exclude reference="XZA-IR-KJM"/>
+                    <exclude reference="g67-po-Chq"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="inLabel" destination="XZA-IR-KJM" id="SWe-PQ-eEE"/>
                 <outlet property="normalLevel" destination="z2E-PL-AeS" id="Uye-mz-XOK"/>
@@ -115,10 +129,11 @@
                 <outlet property="vipLabel" destination="CaZ-Qs-6Po" id="rsa-Px-qrm"/>
                 <outlet property="vipView" destination="g67-po-Chq" id="gCd-3K-tF4"/>
             </connections>
-            <point key="canvasLocation" x="-191.5" y="94"/>
+            <point key="canvasLocation" x="170" y="85"/>
         </view>
     </objects>
     <resources>
+        <image name="bg" width="375" height="130"/>
         <image name="user2" width="14" height="14"/>
         <image name="vip_user" width="16" height="13"/>
     </resources>

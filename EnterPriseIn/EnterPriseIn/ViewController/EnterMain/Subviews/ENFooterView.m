@@ -17,7 +17,11 @@
     // Drawing code
 }
 */
-
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    _noRegisterLabel.hidden = YES;
+    
+}
 
 - (IBAction)getServiceForOnline:(UIButton *)sender {
     

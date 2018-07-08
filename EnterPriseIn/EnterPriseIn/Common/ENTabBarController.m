@@ -86,7 +86,7 @@
     
     self.tabBarItems = [NSMutableArray new];
     
-    TTTabBarItem *tabBarItem1 = [TTTabBarItem tabBarItemWithFrame:CGRectMake(tag*itemWidth, 0, itemWidth, tabBarHeight) title:NSLocalizedString(@"TabBarHomePageName", nil) normalImageName:@"sy" selectedImageName:@"sy_sel" tabBarItemType:TTTabBarItemNormal];
+    TTTabBarItem *tabBarItem1 = [TTTabBarItem tabBarItemWithFrame:CGRectMake(tag*itemWidth, 0, itemWidth, tabBarHeight) title:LocalizableHelperGetStringWithKeyFromTable(@"TabBarHomePageName", nil) normalImageName:@"sy" selectedImageName:@"sy_sel" tabBarItemType:TTTabBarItemNormal];
     [tabBarItem1 addTarget:self action:@selector(itemSelected:) forControlEvents:UIControlEventTouchUpInside];
     [self.tabBarItems addObject:tabBarItem1];
     [self.tabbarView addSubview:tabBarItem1];
@@ -94,14 +94,14 @@
     tag += 1;
     
     
-    TTTabBarItem *tabBarItem2 = [TTTabBarItem tabBarItemWithFrame:CGRectMake(tag*itemWidth, 0, itemWidth, tabBarHeight) title:NSLocalizedString(@"TabBarHomeBranch", nil) normalImageName:@"fl" selectedImageName:@"fl_sel" tabBarItemType:TTTabBarItemNormal];
+    TTTabBarItem *tabBarItem2 = [TTTabBarItem tabBarItemWithFrame:CGRectMake(tag*itemWidth, 0, itemWidth, tabBarHeight) title:LocalizableHelperGetStringWithKeyFromTable(@"TabBarHomeBranch", nil) normalImageName:@"fl" selectedImageName:@"fl_sel" tabBarItemType:TTTabBarItemNormal];
     [tabBarItem2 addTarget:self action:@selector(itemSelected:) forControlEvents:UIControlEventTouchUpInside];
     [self.tabBarItems addObject:tabBarItem2];
     [self.tabbarView addSubview:tabBarItem2];
     tabBarItem2.tag = tag;
     tag += 1;
     
-    TTTabBarItem *tabBarItem3 = [TTTabBarItem tabBarItemWithFrame:CGRectMake(tag*itemWidth, 0, itemWidth, tabBarHeight) title:NSLocalizedString(@"TabBarHomeNews", nil) normalImageName:@"zx" selectedImageName:@"zx_sel" tabBarItemType:TTTabBarItemNormal];
+    TTTabBarItem *tabBarItem3 = [TTTabBarItem tabBarItemWithFrame:CGRectMake(tag*itemWidth, 0, itemWidth, tabBarHeight) title:LocalizableHelperGetStringWithKeyFromTable(@"TabBarHomeNews", nil) normalImageName:@"zx" selectedImageName:@"zx_sel" tabBarItemType:TTTabBarItemNormal];
     [tabBarItem3 addTarget:self action:@selector(itemSelected:) forControlEvents:UIControlEventTouchUpInside];
     [self.tabBarItems addObject:tabBarItem3];
     [self.tabbarView addSubview:tabBarItem3];
@@ -109,7 +109,7 @@
     tag += 1;
     
     
-    TTTabBarItem *tabBarItem4 = [TTTabBarItem tabBarItemWithFrame:CGRectMake(tag*itemWidth, 0, itemWidth, tabBarHeight) title:NSLocalizedString(@"TabBarHomeEnter", nil) normalImageName:@"rz" selectedImageName:@"rz_sel" tabBarItemType:TTTabBarItemNormal];
+    TTTabBarItem *tabBarItem4 = [TTTabBarItem tabBarItemWithFrame:CGRectMake(tag*itemWidth, 0, itemWidth, tabBarHeight) title:LocalizableHelperGetStringWithKeyFromTable(@"TabBarHomeEnter", nil) normalImageName:@"rz" selectedImageName:@"rz_sel" tabBarItemType:TTTabBarItemNormal];
     [tabBarItem4 addTarget:self action:@selector(itemSelected:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.tabBarItems addObject:tabBarItem4];
@@ -117,7 +117,7 @@
     tabBarItem4.tag = tag;
     tag += 1;
     
-    TTTabBarItem *tabBarItem5 = [TTTabBarItem tabBarItemWithFrame:CGRectMake(tag*itemWidth, 0, itemWidth, tabBarHeight) title:NSLocalizedString(@"TabBarHomePerson", nil) normalImageName:@"mine" selectedImageName:@"mine_sel" tabBarItemType:TTTabBarItemNormal];
+    TTTabBarItem *tabBarItem5 = [TTTabBarItem tabBarItemWithFrame:CGRectMake(tag*itemWidth, 0, itemWidth, tabBarHeight) title:LocalizableHelperGetStringWithKeyFromTable(@"TabBarHomePerson", nil) normalImageName:@"mine" selectedImageName:@"mine_sel" tabBarItemType:TTTabBarItemNormal];
     [tabBarItem5 addTarget:self action:@selector(itemSelected:) forControlEvents:UIControlEventTouchUpInside];
     [self.tabBarItems addObject:tabBarItem5];
     [self.tabbarView addSubview:tabBarItem5];

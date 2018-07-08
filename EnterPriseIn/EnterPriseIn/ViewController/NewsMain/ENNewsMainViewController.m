@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"TabBarHomeNews", nil);
+    self.title = LocalizableHelperGetStringWithKeyFromTable(@"TabBarHomeNews", nil);
     
     [self.view addSubview:self.baseTableView];
     

@@ -12,6 +12,12 @@
 #import "MainBranchView.h"
 #import <Masonry.h>
 #import "TSMarqueeView.h"
+#import "LanguageLocalizableHelper.h"
+#import <AFNetworking.h>
+#import "ENHttp.h"
+#import "AdInfo.h"
+#import "ENBranchModel.h"
+#import "NewsItem.h"
 
 const CGFloat kBannerHeight = 200;
 
@@ -33,20 +39,26 @@ const CGFloat kBannerHeight = 200;
 
 @property (nonatomic, strong) UITextField *searchField;
 
+@property (nonatomic, strong) UIButton  *languageButton;
+
 @end
 
 @implementation ENHomePageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"AppName", nil);
     
+    self.title = LocalizableHelperGetStringWithKeyFromTable(@"AppName", nil);
     [self readyView];
     [self requestData];
 
 }
 
 - (void)readyView{
+    
+    [self addRightBarButtonItem:[[UIBarButtonItem alloc]initWithCustomView:self.languageButton]];
+    
+    
     
     self.view.backgroundColor = [UIColor colorWithHex:0xf4f4f4];
     [self.view addSubview:self.mainScrollView];
@@ -102,27 +114,51 @@ const CGFloat kBannerHeight = 200;
 
 - (void)requestData{
     
-    NSArray *images = @[@"http://img.berui.com/hefei/news/simg/2018/04/12/1523501837_945664.jpg",
-                        @"http://img.berui.com/hefei/news/simg/2018/04/12/1523502931_923026.jpg",
-                        @"http://img.berui.com/hefei/news/simg/2018/04/11/1523425875_218733.jpg"
-                        ];
-    self.bannerView.imageURLStringsGroup = images;
+   
+   __block  CGFloat  branchHeight;
     
-    CGFloat branchHeight = [self.mainBranchView setHomePageMainBranchForData:@[@"奥迪",@"宝马",@"奔驰",@"阿斯顿马丁",@"劳斯莱斯",@"别克",@"雪佛兰",@"雷克萨斯"]];
-    [self.mainBranchView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(branchHeight);
+    [ENHttp getENHomePageDataCompleteBlock:^(BOOL ok, NSString *message, NSArray *ads, NSArray *branchs, NSArray *hotNews) {
+        if (ok) {
+            NSMutableArray *images = [NSMutableArray arrayWithCapacity:0];
+            NSMutableArray *news = [NSMutableArray arrayWithCapacity:0];
+            
+            for (AdInfo *ad in ads) {
+                [images addObject:ad.adContentUrl];
+            }
+            for (NewsItem *item in hotNews) {
+                [news addObject:item.newsTitle];
+            }
+            self.bannerView.imageURLStringsGroup = images;
+            
+            branchHeight = [self.mainBranchView setHomePageMainBranchForData:branchs];
+            
+            [self.mainBranchView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.height.mas_equalTo(branchHeight);
+            }];
+            
+            self.marqueeView.textDataArr = news;
+            [self.marqueeView startScrollBottomToTopWithNoSpace];
+            
+            self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth,kBannerHeight+branchHeight+self.businessTableView.height+90);
+            [self.view layoutIfNeeded];
+        }
+        
     }];
     
-    [self.businessTableView setBusinessInfo:nil haveSectionHeader:YES];
-    [self.businessTableView mas_updateConstraints:^(MASConstraintMaker *make) {
-       make.height.mas_equalTo(5*100+40);
+    [ENHttp getHomePageCoorporationListCompleteBlock:^(BOOL ok, NSString *message, NSArray *coorporationList) {
+        if (ok) {
+            [self.businessTableView setBusinessInfo:coorporationList haveSectionHeader:YES];
+
+            [self.businessTableView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.height.mas_equalTo(coorporationList.count*100.0f+40);
+            }];
+            self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth,kBannerHeight+branchHeight+self.businessTableView.height+90);
+            [self.view layoutIfNeeded];
+        }
+        
     }];
     
-    self.marqueeView.textDataArr = @[@"空港大城，司机璀璨，鸟居世界",@"恒大阳光半岛",@"合肥市徽州大道与芜湖路交口安徽大剧院"];
-    [self.marqueeView startScrollBottomToTopWithNoSpace];
-    
-    self.mainScrollView.contentSize = CGSizeMake(KDeviceWidth,kBannerHeight+branchHeight+self.businessTableView.height+90);
-    
+   
 }
 
 #pragma mark SDCycleScrollViewDelegate
@@ -135,6 +171,19 @@ const CGFloat kBannerHeight = 200;
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self.searchBar endEditing:YES];
 }
+
+- (void)changeAppLanguage:(UIButton*)sender{
+    
+    if ([LanguageLocalizableHelper shareInstance].currentLanguage == Language_zh_Hans) {
+        [[LanguageLocalizableHelper shareInstance] changeLanguage:Language_en];
+        [self makeToast:LocalizableHelperGetStringWithKeyFromTable(@"LanguageChangeSuccess", nil) duration:1.5];
+    }else{
+        [[LanguageLocalizableHelper shareInstance] changeLanguage:Language_zh_Hans];
+        [self makeToast:LocalizableHelperGetStringWithKeyFromTable(@"LanguageChangeSuccess", nil) duration:1.5];
+    }
+    
+}
+
 
 #pragma mark - getter
 - (UIScrollView *)mainScrollView {
@@ -188,7 +237,7 @@ const CGFloat kBannerHeight = 200;
 - (UIView*)marqueeNewsView{
     if (!_marqueeNewsView) {
         _marqueeNewsView = [[UIView alloc]initWithFrame:CGRectZero];
-        _marqueeNewsView.backgroundColor = [UIColor colorWithHex:0xe5e5e5];
+        _marqueeNewsView.backgroundColor = ThemebgViewColor;
         UIImageView *bgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, KDeviceWidth, 40)];
         bgImageView.image = [UIImage imageNamed:@"newsbg"];
         bgImageView.userInteractionEnabled = YES;
@@ -222,7 +271,7 @@ const CGFloat kBannerHeight = 200;
     if (!_searchField) {
         UITextField *titleTextField = [[UITextField alloc] initWithFrame:CGRectZero];
         titleTextField.layer.cornerRadius = 2.0f;//14.0f;
-        titleTextField.placeholder = @"搜索";
+        titleTextField.placeholder = LocalizableHelperGetStringWithKeyFromTable(@"SearchKey", nil);
         titleTextField.delegate = self;
         titleTextField.font = [UIFont systemFontOfSize:13.0f];
         titleTextField.backgroundColor = [UIColor colorWithHex:0xffffff];
@@ -280,6 +329,27 @@ const CGFloat kBannerHeight = 200;
     }
 }
 
+#pragma mark get/set
+- (UIButton *)languageButton{
+    if(!_languageButton){
+        _languageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _languageButton.frame = CGRectMake(0, 0, 44, 44);
+        
+        if ([LanguageLocalizableHelper shareInstance].currentLanguage == Language_zh_Hans) {
+            [_languageButton setImage:[UIImage imageNamed:@"chinese"] forState:UIControlStateNormal];
+        }else{
+            [_languageButton setImage:[UIImage imageNamed:@"A"] forState:UIControlStateNormal];
+        }
+        
+        _languageButton.adjustsImageWhenHighlighted = NO;
+        [_languageButton addTarget:self action:@selector(changeAppLanguage:) forControlEvents:UIControlEventTouchUpInside];
+        if (IOS_VERSION >= 11) {
+            _languageButton.contentHorizontalAlignment =UIControlContentHorizontalAlignmentRight;
+            [_languageButton setImageEdgeInsets:UIEdgeInsetsMake(0, 0,0,-5)];
+        }
+    }
+    return _languageButton;
+}
 
 
 

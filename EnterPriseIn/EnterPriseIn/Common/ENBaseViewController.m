@@ -175,6 +175,19 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (UIButton*)serviceButton{
+    if (!_serviceButton) {
+        _serviceButton = [[UIButton alloc]initWithFrame:CGRectMake(KDeviceWidth-86, KDeviceHeight-116-49-64, 66, 66)];
+        [_serviceButton setImage:[UIImage imageNamed:@"kf"] forState:UIControlStateNormal];
+        [_serviceButton addTarget:self action:@selector(connectCustomerService) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _serviceButton;
+}
+
+- (void)connectCustomerService{
+    
+}
+
 - (BOOL)prefersStatusBarHidden{
     return NO;
 }

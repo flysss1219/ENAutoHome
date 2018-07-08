@@ -12,6 +12,11 @@
 #define kUserLoginInNotification @"kUserLoginInNotification"
 #define kUserLoginOutNotification @"kUserLoginOutNotification"
 
+typedef NS_ENUM(NSUInteger, ENAppLanguageType) {
+    ENAppEnglishType = 0,
+    ENAppChineseType = 1,
+};
+
 @interface CurrentUser : NSObject<NSCoding>
 
 @property (nonatomic,copy) NSString *user_phone;
@@ -21,6 +26,8 @@
 @property (nonatomic,copy) NSString *user_head;
 @property (nonatomic,copy) NSString *user_email;
 @property (nonatomic,copy) NSString *user_address;
+//系统当前语言
+@property (nonatomic,assign) ENAppLanguageType current_language;
 
 + (CurrentUser *)sharedInstance;
 

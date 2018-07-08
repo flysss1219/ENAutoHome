@@ -53,7 +53,7 @@
 - (UIBarButtonItem *)customBackItemWithTarget:(id)target
                                        action:(SEL)action
 {
-    return [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", nil)
+    return [[UIBarButtonItem alloc] initWithTitle:LocalizableHelperGetStringWithKeyFromTable(@"Back", nil)
                                             style:UIBarButtonItemStylePlain
                                            target:target
                                            action:action];

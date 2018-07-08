@@ -23,10 +23,9 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtI-eJ-iig">
-                    <rect key="frame" x="17.5" y="15" width="50" height="15"/>
+                    <rect key="frame" x="17.5" y="15" width="29" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="BkJ-i1-Vfo"/>
-                        <constraint firstAttribute="width" constant="50" id="SeZ-j6-WZg"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
@@ -42,10 +41,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJp-70-cbz">
-                    <rect key="frame" x="17.5" y="75.5" width="50" height="15"/>
+                    <rect key="frame" x="17.5" y="75.5" width="29" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="85f-sV-n8B"/>
-                        <constraint firstAttribute="width" constant="50" id="vWi-By-cKb"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
@@ -144,6 +142,7 @@
                 <outlet property="accountReplay" destination="Qa5-NS-jhO" id="RHF-IJ-VeX"/>
                 <outlet property="addressLabel" destination="puB-Zx-BdC" id="8Ln-xV-p0y"/>
                 <outlet property="addressReplay" destination="khi-JZ-acQ" id="FrB-XJ-ZSa"/>
+                <outlet property="addressTitle" destination="WJp-70-cbz" id="sx8-Sd-KOu"/>
                 <outlet property="userAccount" destination="TqN-Hq-1aM" id="jkl-zt-pn5"/>
             </connections>
             <point key="canvasLocation" x="32.5" y="91"/>

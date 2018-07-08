@@ -7,8 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "CurrentUser.h"
+#import "IQKeyboardManager.h"
+#import "Reachability.h"
+#import "ENAdViewController.h"
+#import <UserNotifications/UserNotifications.h>
+#import "AdInfo.h"
+#import "LanguageLocalizableHelper.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -16,16 +23,49 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
     
     //各种配置
     [self configSDKWithApplication:application options:launchOptions];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveLanguageChangedNotification:) name:LANGUAGEHADCHANGED object:nil];
+    
+
+    //收缩键盘
+    [self configurateKeyBoard];
+    
+    //设置弹出框样式
+    [SVProgressHUD setForegroundColor:[UIColor colorWithHex:0xffffff]];
+    [SVProgressHUD setBackgroundColor:[[UIColor colorWithHex:0x000000] colorWithAlphaComponent:0.7]];
+    
+    //广告
+    ENAdViewController *adViewController = [ENAdViewController new];
+    [adViewController setSkipLoginStatus:^(AdInfo *adInfo){
+        [self changeToHomeViewController:adInfo];
+    }];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    RTRootNavigationController *nav =  [[RTRootNavigationController alloc]initWithRootViewControllerNoWrapping:self.tabBarViewController];
-    self.window.rootViewController = nav;
+    self.window.rootViewController = adViewController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+- (void)changeToHomeViewController:(AdInfo *)adInfo {
+    RTRootNavigationController *nav =  [[RTRootNavigationController alloc]initWithRootViewControllerNoWrapping:self.tabBarViewController];
+    self.window.rootViewController = nav;
+    if (adInfo.adId.length > 0  && [GlobalFunction isUrlAddress:adInfo.adJumpUrl]) {
+        
+    }
+    
+}
+// 配置键盘
+- (void)configurateKeyBoard{
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = NO;
+    manager.enableAutoToolbar = NO;
 }
 
 - (void)configSDKWithApplication:(UIApplication *)application options:(NSDictionary *)launchOptions{
@@ -63,8 +103,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)didReceiveLanguageChangedNotification:(NSNotification*)notification{
+    
+    RTRootNavigationController *nav =  [[RTRootNavigationController alloc]initWithRootViewControllerNoWrapping:[[ENTabBarController alloc]init]];
+    self.window.rootViewController = nav;
+    
+}
 
 #pragma mark - getter
 

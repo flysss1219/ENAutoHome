@@ -8,6 +8,7 @@
 
 #import "BranchIcon.h"
 #import <UIImageView+WebCache.h>
+#import "ENBranchModel.h"
 
 @interface BranchIcon()
 
@@ -58,7 +59,7 @@
 
 - (void)iconDidSelect{
     if (_delegate && [_delegate respondsToSelector:@selector(branchIconDidSelect: andMenuId:)]) {
-        [_delegate branchIconDidSelect:self.tag andMenuId:@""];
+        [_delegate branchIconDidSelect:self.tag andMenuId:self.model.branch_id];
     }
 }
 

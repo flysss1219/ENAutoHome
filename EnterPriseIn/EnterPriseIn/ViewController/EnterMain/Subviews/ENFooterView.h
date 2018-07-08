@@ -15,7 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *noRegisterLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *callImageView;
 
+@property (weak, nonatomic) IBOutlet UILabel *contactusLabel;
 
 
 @end

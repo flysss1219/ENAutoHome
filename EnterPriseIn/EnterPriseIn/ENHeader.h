@@ -23,11 +23,10 @@
 #define ThemeHighColor      [UIColor colorWithHexString:@"#f55656"]
 
 //视图背景色
-#define ThemebgViewColor    [UIColor colorWithHexString:@"#f8f8f8"]
-
+#define ThemebgViewColor    [UIColor colorWithHexString:@"#eef1f8"]
 
 //正文颜色
-#define MainTitleColor      [UIColor colorWithHexString:@"#444444"]
+#define MainTitleColor      [UIColor colorWithHexString:@"#000000"]
 //副文颜色
 #define ViceTitleColor      [UIColor colorWithHexString:@"#000000"]
 //标题
@@ -88,5 +87,5 @@
 #import "YYKit.h"
 #import <Masonry.h>
 #import <UIImageView+WebCache.h>
-
+#import "CurrentUser.h"
 #endif /* ENHeader_h */

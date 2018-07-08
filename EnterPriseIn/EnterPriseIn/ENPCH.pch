@@ -16,14 +16,16 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "ENHeader.h"
+#import "LanguageLocalizableHelper.h"
+
 
 #define ENVIRONMENT_HOME        0 //0 测试 1 正式
 
-#define kBasePort  @"https://api.berui.com/"
+#define kBasePort  @"http://che.qxswt.com"
 
 #else
 
-#define kBasePort @"https://api.berui.com/"
+#define kBasePort @"http://che.qxswt.com"
 
 #endif
 

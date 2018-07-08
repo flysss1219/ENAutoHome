@@ -22,14 +22,24 @@
     _introduceField.layer.borderWidth = 0.5f;
     _introduceField.layer.masksToBounds = YES;
     
+    _nameLabel.text = LocalizableHelperGetStringWithKeyFromTable(@"EnterpriseName", nil);
+    _addressLabel.text = LocalizableHelperGetStringWithKeyFromTable(@"EnterpriseAddress", nil);
+    _introduceLabel.text = LocalizableHelperGetStringWithKeyFromTable(@"EnterpriseIntroduce", nil);
+    _connectLabel.text = LocalizableHelperGetStringWithKeyFromTable(@"ConnectInfo", nil);
+    _fullNameLabel.text = LocalizableHelperGetStringWithKeyFromTable(@"FirstName", nil);
+    _telLabel.text = LocalizableHelperGetStringWithKeyFromTable(@"TEL", nil);
+    
+    _nameField.placeholder = LocalizableHelperGetStringWithKeyFromTable(@"PleaseFillin", nil);
+    _detailAddressField.placeholder = LocalizableHelperGetStringWithKeyFromTable(@"DetailAddress", nil);
+    _introduceField.text = LocalizableHelperGetStringWithKeyFromTable(@"MaxWordCount", nil);
+    _connectField.placeholder = LocalizableHelperGetStringWithKeyFromTable(@"PleaseFillin", nil);
+    _phoneField.placeholder = LocalizableHelperGetStringWithKeyFromTable(@"PleaseFillin", nil);
+
+    [_applyButton setTitle:LocalizableHelperGetStringWithKeyFromTable(@"ApplyEnter", nil) forState:UIControlStateNormal];
+    
 }
 
 
-
-- (IBAction)selectEnterpriseAddress:(id)sender {
-    
-    
-}
 - (IBAction)commitEnterApply:(id)sender {
     
     

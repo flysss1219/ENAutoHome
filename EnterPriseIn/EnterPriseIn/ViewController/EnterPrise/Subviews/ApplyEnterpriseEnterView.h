@@ -10,8 +10,6 @@
 
 @interface ApplyEnterpriseEnterView : UIView
 
-//省市区
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 //企业名称
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
@@ -26,5 +24,18 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
 //申请
 @property (weak, nonatomic) IBOutlet UIButton *applyButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *connectLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *introduceLabel;
+
+
+
+@property (weak, nonatomic) IBOutlet UILabel *telLabel;
 
 @end

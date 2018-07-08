@@ -189,4 +189,11 @@
  *  清理缓存
  */
 + (BOOL)clearCaches;
+
+/**
+ * 获取系统当前语言
+ */
++ (NSString*)getCurrentLanguage;
+
+
 @end

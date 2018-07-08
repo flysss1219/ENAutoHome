@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class EnterpriseInfoModel;
+
 @interface BusinessListCell : UITableViewCell
 
 
@@ -23,6 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *levelImageView;
 
 
-- (void)setDataForCell:(id)data;
+- (void)setDataForCell:(EnterpriseInfoModel*)data;
 
 @end

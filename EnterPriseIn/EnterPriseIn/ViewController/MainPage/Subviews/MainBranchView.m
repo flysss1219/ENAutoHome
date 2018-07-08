@@ -8,6 +8,7 @@
 
 #import "MainBranchView.h"
 #import "BranchIcon.h"
+#import "ENBranchModel.h"
 
 const CGFloat kMianGap = 15.0f;
 
@@ -35,7 +36,8 @@ const CGFloat kMianGap = 15.0f;
     CGFloat y = 40;
     for (int i = 0; i<data.count; i++ ) {
         
-        BranchIcon *icon = [[BranchIcon alloc]initWithFrame:CGRectMake(0, 0, iconWidth, _kBranchHeight) andImage:nil andTitle:data[i]];
+        ENBranchModel *model = [data objectAtIndex:i];
+        BranchIcon *icon = [[BranchIcon alloc]initWithFrame:CGRectMake(0, 0, iconWidth, _kBranchHeight) andImage:model.logo andTitle:model.branch_title];
         icon.delegate = self;
         icon.tag = 900+i;
         [self addSubview:icon];

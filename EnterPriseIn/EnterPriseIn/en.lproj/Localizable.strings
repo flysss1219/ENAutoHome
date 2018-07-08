@@ -1,10 +1,11 @@
-/* 
-  Localizable.strings
-  EnterPriseIn
+/*
+ ENAppLanguage.strings
+ EnterPriseIn
+ 
+ Created by iOSDev on 2018/6/21.
+ Copyright © 2018年 com.shun. All rights reserved.
+ */
 
-  Created by iOSDev on 2018/6/21.
-  Copyright © 2018年 com.shun. All rights reserved.
-*/
 
 "AppName" = "Auto's Home";
 "TabBarHomePageName" = "Home";
@@ -14,8 +15,62 @@
 "TabBarHomePerson" = "Mine";
 "HomePageTableHeader" = "CooperativeBusiness";
 
+
 "ShareApp" = "Share App";
 "WechatFriends" = "WechatFriends";
 "WechatSpace" = "Wechat Space";
 "QQFriends" = "QQFriends";
 "WhatsApp" = "WhatsApp";
+
+
+"ResetAccount" = "ResetPhone";
+"SetAddress" = "SetAddress";
+"SetNickName" = "SetNickName";
+
+"Login" = "Login";
+"AccountNamePhone" = "PhoneNum";
+"Password" = "Password";
+"Register" = "Register";
+"ForgetPwd" = "ForgetPassword";
+"PleaseInput" = "please input";
+"VertifyCode" = "Vertify";
+"InputPhoneNum" = "please input phone number";
+"PleaseFillin" = "please fill in";
+"PleaseFillinPWD" = "please fill in pwd";
+"DemandParts" = "DemandParts";
+"Back" = "Back";
+"SendVertifyCode" = "SendyCode";
+"Email" = "Email";
+"InputEmail" = "please input Email";
+"FindPassword" = "FindBackPassword";
+"Confirm" = "Confirm";
+"ConfirmPassword" = "Again";
+"DemandTrips" = "Demand";
+"PleaseConfirmPassword" = "Please confirm password";
+
+"FindBackPassword" = "FindBackPassword";
+"ResetPassword" = "ResetPassword";
+
+"LanguageChangeSuccess" = "Operate Success,Now is English";
+"SkipAd" = "Skip";
+"SearchKey" = "Search";
+
+
+"UserName" = "UserName";
+"NickName" = "NickName";
+"Address" = "Address";
+"Reset" = "Reset";
+
+
+"EnterpriseName" = "EnterpriseName";
+"EnterpriseAddress" = "EnterpriseAddress";
+"EnterpriseIntroduce" = "EnterpriseIntroduce";
+"ConnectInfo" = "ConnectInfomation";
+"FirstName" = "Full Name";
+"TEL" = "TEL";
+"ApplyEnter" = "Apply";
+"DetailAddress" = "detail address";
+"MaxWordCount" = "please input,do not over 500 words";
+
+
+

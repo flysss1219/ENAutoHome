@@ -12,9 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ENEditPhoneViewController">
             <connections>
                 <outlet property="codeField" destination="jaq-R5-w62" id="RVk-Lk-9yb"/>
+                <outlet property="codeLabel" destination="OAT-mu-gvM" id="D41-NX-RkF"/>
                 <outlet property="phoneLabel" destination="ZuW-gR-bKx" id="D0E-3i-ajs"/>
                 <outlet property="resetBtn" destination="Wn5-Kt-usJ" id="avn-rP-ryQ"/>
                 <outlet property="sendCodeBtn" destination="X6J-a3-27p" id="EQo-fA-tXY"/>
+                <outlet property="titleLabel" destination="28M-Ai-EzO" id="6F5-bP-pdc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

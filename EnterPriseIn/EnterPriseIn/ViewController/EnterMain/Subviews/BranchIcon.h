@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
+@class ENBranchModel;
 @class BranchIcon;
 @protocol BranchIconSelectDelegate<NSObject>
 @optional
@@ -18,6 +19,7 @@
 
 @interface BranchIcon : UIView
 
+@property (nonatomic, strong) ENBranchModel *model;
 @property (nonatomic, weak) id<BranchIconSelectDelegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame andImage:(NSString*)imageUrl andTitle:(NSString*)title;

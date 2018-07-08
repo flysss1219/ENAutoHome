@@ -10,7 +10,7 @@
 
 
 @class CarBranchView;
-
+@class ENBranchModel;
 @protocol CarBranchViewDelegate<NSObject>
 
 - (void)carBranchViewDidSelect:(NSInteger)index andMenuId:(NSString*)menuId;
@@ -20,7 +20,7 @@
 
 @property (nonatomic, weak) id<CarBranchViewDelegate> menuDelegate;
 
-- (CGFloat)setCarBranchForData:(NSArray*)data andBranchTitle:(NSString*)title andInitTag:(NSInteger)tag;
+- (CGFloat)setCarBranchForData:(ENBranchModel*)branchModel andBranchTitle:(NSString*)title andInitTag:(NSInteger)tag;
 
 
 @end

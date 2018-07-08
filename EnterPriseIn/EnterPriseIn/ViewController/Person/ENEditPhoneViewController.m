@@ -18,7 +18,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *resetBtn;
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *codeLabel;
 
 @end
 
@@ -26,8 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"ResetAccount", nil);
+    self.title = LocalizableHelperGetStringWithKeyFromTable(@"ResetAccount", nil);
     [self setLeftButton];
+    self.view.backgroundColor = ThemebgViewColor;
 }
 
 

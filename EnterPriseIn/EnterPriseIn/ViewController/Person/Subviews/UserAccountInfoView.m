@@ -10,9 +10,26 @@
 
 @implementation UserAccountInfoView
 
+- (void)awakeFromNib{
+    
+    [super awakeFromNib];
+    
+    
+    
+    if ([LanguageLocalizableHelper shareInstance].currentLanguage == Language_zh_Hans) {
+        _accountLabel.text = LocalizableHelperGetStringWithKeyFromTable(@"AccountNamePhone", nil);
+    }else{
+        _accountLabel.text = LocalizableHelperGetStringWithKeyFromTable(@"Email", nil);
+    }
+     _addressTitle.text = LocalizableHelperGetStringWithKeyFromTable(@"Address", nil);
+     _accountReplay.text = LocalizableHelperGetStringWithKeyFromTable(@"Reset", nil);
+     _addressReplay.text = LocalizableHelperGetStringWithKeyFromTable(@"Reset", nil);
+}
 
-
-
+- (void)updateUserInfo{
+    
+    
+}
 
 - (IBAction)editUserAccount:(UIButton *)sender {
     

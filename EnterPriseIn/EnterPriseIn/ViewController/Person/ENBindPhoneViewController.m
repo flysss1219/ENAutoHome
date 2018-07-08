@@ -27,6 +27,7 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"BindAccount", nil);
     [self setLeftButton];
+    self.view.backgroundColor = ThemebgViewColor;
     // Do any additional setup after loading the view from its nib.
 }
 

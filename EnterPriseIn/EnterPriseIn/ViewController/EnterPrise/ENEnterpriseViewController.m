@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"TabBarHomeEnter", nil);
+    self.title = LocalizableHelperGetStringWithKeyFromTable(@"TabBarHomeEnter", nil);
     
     [self readyView];
 }

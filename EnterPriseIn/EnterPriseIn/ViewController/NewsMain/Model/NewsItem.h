@@ -10,4 +10,8 @@
 
 @interface NewsItem : NSObject
 
+@property (nonatomic, copy)NSString* newsTitle;
+
+@property (nonatomic, copy)NSString* newsId;
+
 @end

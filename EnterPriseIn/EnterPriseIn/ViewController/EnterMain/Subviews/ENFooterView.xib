@@ -124,10 +124,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="callImageView" destination="vsD-Qi-sQv" id="jaB-6X-mnF"/>
                 <outlet property="contactView" destination="xhz-dC-Aso" id="9Ua-tE-YtZ"/>
+                <outlet property="contactusLabel" destination="oI6-LI-DVQ" id="SCt-gR-2py"/>
                 <outlet property="noRegisterLabel" destination="5gq-3f-CMo" id="v0b-he-fOc"/>
             </connections>
-            <point key="canvasLocation" x="244.5" y="136.5"/>
+            <point key="canvasLocation" x="-4" y="134"/>
         </view>
     </objects>
     <resources>

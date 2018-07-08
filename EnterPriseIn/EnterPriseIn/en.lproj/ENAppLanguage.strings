@@ -13,4 +13,62 @@
 "TabBarHomeNews" = "News";
 "TabBarHomeEnter" = "Enter";
 "TabBarHomePerson" = "Mine";
+"HomePageTableHeader" = "CooperativeBusiness";
+
+
 "ShareApp" = "Share App";
+"WechatFriends" = "WechatFriends";
+"WechatSpace" = "Wechat Space";
+"QQFriends" = "QQFriends";
+"WhatsApp" = "WhatsApp";
+
+
+"ResetAccount" = "ResetPhone";
+"SetAddress" = "SetAddress";
+"SetNickName" = "SetNickName";
+
+"Login" = "Login";
+"AccountNamePhone" = "PhoneNum";
+"Password" = "Password";
+"Register" = "Register";
+"ForgetPwd" = "ForgetPassword";
+"PleaseInput" = "please input";
+"VertifyCode" = "Vertify";
+"InputPhoneNum" = "please input phone number";
+"PleaseFillin" = "please fill in";
+"PleaseFillinPWD" = "please fill in pwd";
+"DemandParts" = "DemandParts";
+"Back" = "Back";
+"SendVertifyCode" = "SendCode";
+"Email" = "Email";
+"InputEmail" = "please input Email";
+"FindPassword" = "FindBackPassword";
+"Confirm" = "Confirm";
+
+"ConfirmPassword" = "Again";
+"DemandTrips" = "Demand";
+"PleaseConfirmPassword" = "Please confirm password";
+
+"LanguageChangeSuccess" = "Operate Success,Now is English";
+"SkipAd" = "Skip";
+"SearchKey" = "Search";
+
+
+"UserName" = "UserName";
+"NickName" = "NickName";
+"Adress" = "Address";
+"Reset" = "Reset";
+
+
+"EnterpriseName" = "EnterpriseName";
+"EnterpriseAddress" = "EnterpriseAddress";
+"EnterpriseIntroduce" = "EnterpriseIntroduce";
+"ConnectInfo" = "ConnectInfomation";
+"FirstName" = "Full Name";
+"TEL" = "TEL";
+"ApplyEnter" = "Apply";
+"DetailAddress" = "detail address";
+"MaxWordCount" = "please input,do not over 500 words";
+
+
+

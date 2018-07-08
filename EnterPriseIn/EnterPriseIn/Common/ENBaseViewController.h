@@ -16,6 +16,7 @@
 
 @property(strong,nonatomic) UIButton* backBtn;
 
+@property (nonatomic, strong) UIButton *serviceButton;
 
 #pragma mark - HUD
 
@@ -26,6 +27,11 @@
 - (void)showHUDErrorWithStatuslabel:(NSString *)tips;
 - (void)showSuccessWithStatuslabel:(NSString *)tips;
 - (void)hideHUD;
+
+#pragma mark - Toast
+- (void)makeToast:(NSString *)message;
+- (void)makeToast:(NSString *)message duration:(NSTimeInterval)duration;
+
 
 #pragma mark - UINavigationItem
 - (void)addLeftBarButtonItem:(UIBarButtonItem *)item;
@@ -40,4 +46,8 @@
 -(void)setLeftButton;
 
 -(void)backBtnClick;
+
+- (void)connectCustomerService;
+
+
 @end

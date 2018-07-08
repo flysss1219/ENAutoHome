@@ -20,6 +20,8 @@
     _normalLevel.layer.borderWidth = 0.5f;
     _normalLevel.layer.borderColor = [UIColor whiteColor].CGColor;
     _normalLevel.layer.masksToBounds = YES;
+    _userName.text = LocalizableHelperGetStringWithKeyFromTable(@"UserName", nil);
+    
 }
 
 //更新用户信息

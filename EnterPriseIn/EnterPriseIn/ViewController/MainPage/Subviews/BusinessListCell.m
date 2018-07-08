@@ -8,6 +8,7 @@
 
 #import "BusinessListCell.h"
 #import <UIImageView+WebCache.h>
+#import "EnterpriseInfoModel.h"
 
 @implementation BusinessListCell
 
@@ -22,11 +23,15 @@
     // Configure the view for the selected state
 }
 
-- (void)setDataForCell:(id)data{
+- (void)setDataForCell:(EnterpriseInfoModel*)data{
     
-    self.titleLabel.text = @"苏州园林拙政园";
-    self.tagLabel.text = @"100点击率";
-    self.addressLabel.text = @"苏州市-观前街-松涛路";
-    
+    self.titleLabel.text = data.company_title;
+    self.tagLabel.text = [NSString stringWithFormat:@"%@点击率",data.company_hits];
+    self.addressLabel.text = data.company_address;
+    if (data.is_vip) {
+        self.levelImageView.hidden = NO;
+    }else{
+        self.levelImageView.hidden = YES;
+    }
 }
 @end

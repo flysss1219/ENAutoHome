@@ -1275,4 +1275,20 @@
     return flag;
     
 }
+
+
+
++ (NSString*)getCurrentLanguage
+{
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    NSLog(@"%@" , currentLanguage);
+    return currentLanguage;
+}
+
+
+
+
+
+
 @end

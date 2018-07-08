@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ENSetNickViewController">
             <connections>
+                <outlet property="saveButton" destination="g7H-1s-aHN" id="LS6-lD-oLY"/>
+                <outlet property="textField" destination="AhD-Nz-BML" id="jr7-PZ-LlE"/>
+                <outlet property="titleLabel" destination="iA1-Yj-H9X" id="RAc-Gn-oTb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +33,9 @@
                     <state key="normal" title="保存">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="commitUserInfo:" destination="-1" eventType="touchUpInside" id="beD-MY-qjB"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Etf-zM-ggZ">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>

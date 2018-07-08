@@ -37,10 +37,10 @@
                    @"whatsapp"
                    ];
     _titlesArr = @[
-                   NSLocalizedString(@"WechatFriends", nil),
-                   NSLocalizedString(@"WechatSpace", nil),
-                   NSLocalizedString(@"QQFriends", nil),
-                   NSLocalizedString(@"WhatsApp", nil),
+                   LocalizableHelperGetStringWithKeyFromTable(@"WechatFriends", nil),
+                   LocalizableHelperGetStringWithKeyFromTable(@"WechatSpace", nil),
+                   LocalizableHelperGetStringWithKeyFromTable(@"QQFriends", nil),
+                   LocalizableHelperGetStringWithKeyFromTable(@"WhatsApp", nil),
                    ];
     
     [self addSubview:self.titleLabel];
@@ -66,7 +66,7 @@
 
 - (UILabel*)titleLabel{
     if (!_titleLabel) {
-        _titleLabel = [GlobalFactoryViews createLabelWithFrame:CGRectMake(17.5,15,KDeviceWidth-35, 15) text:NSLocalizedString(@"ShareApp", nil) labelFont:[UIFont systemFontOfSize:14] textColor:ViceTitleColor textAligenment:0];
+        _titleLabel = [GlobalFactoryViews createLabelWithFrame:CGRectMake(17.5,15,KDeviceWidth-35, 15) text:LocalizableHelperGetStringWithKeyFromTable(@"ShareApp", nil) labelFont:[UIFont systemFontOfSize:14] textColor:ViceTitleColor textAligenment:0];
     }
     return _titleLabel;
 }
